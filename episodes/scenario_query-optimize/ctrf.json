@@ -1,0 +1,74 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787944546.8820684,
+      "stop": 1787944862.0876734
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_compare_golden_vs_my_sql_query_correctness",
+        "status": "passed",
+        "duration": 303.34026904031634,
+        "start": 1787944546.914575,
+        "stop": 1787944850.255164,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_check_for_db_modifications",
+        "status": "passed",
+        "duration": 0.15269005671143532,
+        "start": 1787944850.2554626,
+        "stop": 1787944850.4084096,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_compare_golden_vs_solution_runtime",
+        "status": "passed",
+        "duration": 9.995521793141961,
+        "start": 1787944850.4086769,
+        "stop": 1787944860.4044323,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_outputs_match_exactly",
+        "status": "passed",
+        "duration": 1.6799706425517797,
+        "start": 1787944860.4047005,
+        "stop": 1787944862.0848985,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_solution_contains_single_sql_query",
+        "status": "passed",
+        "duration": 0.0012836530804634094,
+        "start": 1787944862.0851681,
+        "stop": 1787944862.086619,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_solution_is_small",
+        "status": "passed",
+        "duration": 0.00046179257333278656,
+        "start": 1787944862.0868642,
+        "stop": 1787944862.0874653,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "scenario": "crack-7z-hash",
+  "instruction_md": "You need to create a file called \"/app/solution.txt\" with the word found in \"secret_file.txt\" in the \"secrets.7z\" archive.\n\nThe archive is password-protected. You will need to crack the password to extract the contents.\n",
+  "agent_output_path": "/app/solution.txt"
+}

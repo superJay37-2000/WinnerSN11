@@ -1,0 +1,85 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]
+Fetched 10.2 MB in 1s (9333 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.14.1-2+deb13u4).
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+downloading uv 0.9.5 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+WARN: The following commands are shadowed by other commands in your PATH: uv uvx
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 12ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 12 items
+
+../tests/test_outputs.py ........                                        [ 66%]
+../tests/test_structure.py FF..                                          [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_directory_count_matches _________________________
+
+    def test_directory_count_matches():
+        exp_dirs, _ = _parse_expected()
+        act_dirs, _ = _walk_actual()
+>       assert len(act_dirs) == len(exp_dirs), (
+            f"expected {len(exp_dirs)} directories, reconstructed {len(act_dirs)}"
+        )
+E       AssertionError: expected 0 directories, reconstructed 69
+E       assert 69 == 0
+E        +  where 69 = len({'-config', 'archive', 'data', 'documents', 'leve!l1_5]', 'leve!l1_5]/^sub_3', ...})
+E        +  and   0 = len(set())
+
+/tests/test_structure.py:78: AssertionError
+___________________________ test_file_count_matches ____________________________
+
+    def test_file_count_matches():
+        _, exp_files = _parse_expected()
+        _, act_files = _walk_actual()
+>       assert len(act_files) == len(exp_files), (
+            f"expected {len(exp_files)} files, reconstructed {len(act_files)}"
+        )
+E       AssertionError: expected 0 files, reconstructed 149
+E       assert 149 == 0
+E        +  where 149 = len({'-config/file109', '-config/file55(', '-config/file60', '-config/file85', ']file49', 'archive/%fi?le21', ...})
+E        +  and   0 = len(set())
+
+/tests/test_structure.py:86: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_output_files_exist
+PASSED ../tests/test_outputs.py::test_tree_map_hash_unchanged
+PASSED ../tests/test_outputs.py::test_directory_reconstruction_and_comparison
+PASSED ../tests/test_outputs.py::test_files_and_directories_created
+PASSED ../tests/test_outputs.py::test_files_are_zero_byte
+PASSED ../tests/test_outputs.py::test_directory_permissions
+PASSED ../tests/test_outputs.py::test_script_is_reproducible
+PASSED ../tests/test_outputs.py::test_tree_command_availability
+PASSED ../tests/test_structure.py::test_all_directories_present
+PASSED ../tests/test_structure.py::test_all_files_present
+FAILED ../tests/test_structure.py::test_directory_count_matches - AssertionEr...
+FAILED ../tests/test_structure.py::test_file_count_matches - AssertionError: ...
+========================= 2 failed, 10 passed in 0.23s =========================

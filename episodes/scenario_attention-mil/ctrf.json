@@ -1,0 +1,101 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787939528.763305,
+      "stop": 1787939530.0172048
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_abmil_file_exists",
+        "status": "passed",
+        "duration": 0.0005992986261844635,
+        "start": 1787939529.9760206,
+        "stop": 1787939529.9768772,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_attention_mechanism_implementation",
+        "status": "passed",
+        "duration": 0.005599508993327618,
+        "start": 1787939529.9770806,
+        "stop": 1787939529.982855,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_abmil_model_initialization",
+        "status": "passed",
+        "duration": 0.0010807812213897705,
+        "start": 1787939529.983027,
+        "stop": 1787939529.984266,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_abmil_forward_pass_comprehensive",
+        "status": "passed",
+        "duration": 0.005723627284169197,
+        "start": 1787939529.9844396,
+        "stop": 1787939529.9903283,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_numerical_stability",
+        "status": "passed",
+        "duration": 0.002060404047369957,
+        "start": 1787939529.9905152,
+        "stop": 1787939529.9927638,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_gradient_flow",
+        "status": "passed",
+        "duration": 0.0027619032189249992,
+        "start": 1787939529.9929695,
+        "stop": 1787939529.9959106,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_numerical_precision_dtypes",
+        "status": "passed",
+        "duration": 0.014374165795743465,
+        "start": 1787939529.996111,
+        "stop": 1787939530.0106473,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_direct_model_execution",
+        "status": "passed",
+        "duration": 0.0022986941039562225,
+        "start": 1787939530.0108485,
+        "stop": 1787939530.0133262,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_basic_test_function_executes",
+        "status": "passed",
+        "duration": 0.003236175514757633,
+        "start": 1787939530.0135188,
+        "stop": 1787939530.0169728,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

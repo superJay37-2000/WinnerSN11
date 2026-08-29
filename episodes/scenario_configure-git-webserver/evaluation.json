@@ -1,0 +1,100 @@
+{
+  "reward": 1,
+  "passed": 8,
+  "total": 8,
+  "correctness": 1.0,
+  "cost_usd": 0.03559657500000001,
+  "verifier_stdout": "Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\nGet:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\nGet:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]\nGet:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]\nGet:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]\nFetched 10.2 MB in 1s (8942 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\ncurl is already the newest version (8.14.1-2+deb13u4).\n0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.\ndownloading uv 0.9.5 x86_64-unknown-linux-gnu\nno checksums to verify\ninstalling to /root/.local/bin\n  uv\n  uvx\neverything's installed!\n\nTo add $HOME/.local/bin to your PATH, either restart your shell or run:\n\n    source $HOME/.local/bin/env (sh, bash, zsh)\n    source $HOME/.local/bin/env.fish (fish)\nWARN: The following commands are shadowed by other commands in your PATH: uv uvx\n==> running agent setup.sh\nHit:1 http://deb.debian.org/debian trixie InRelease\nHit:2 http://deb.debian.org/debian trixie-updates InRelease\nHit:3 http://deb.debian.org/debian-security trixie-security InRelease\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\ngit is already the newest version (1:2.47.3-0+deb13u1).\nnginx is already the newest version (1.26.3-3+deb13u7).\nopenssh-server is already the newest version (1:10.0p1-7+deb13u4).\nca-certificates is already the newest version (20250419).\n0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.\nusermod: no changes\nInitialized empty Git repository in /git/server/\nnginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful\nsetup complete: sshd on 22, nginx on 8080, repo /git/server\n==> setup.sh exited 0\nDownloading pygments (1.2MiB)\n Downloading pygments\nInstalled 6 packages in 13ms\n============================= test session starts ==============================\nplatform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0\nrootdir: /tests\nplugins: json-ctrf-0.3.5\ncollected 8 items\n\n../tests/test_outputs.py ........                                        [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED ../tests/test_outputs.py::test_packages_installed\nPASSED ../tests/test_outputs.py::test_git_user_exists\nPASSED ../tests/test_outputs.py::test_bare_repo_exists\nPASSED ../tests/test_outputs.py::test_bare_repo_owned_by_git\nPASSED ../tests/test_outputs.py::test_post_receive_hook_installed\nPASSED ../tests/test_outputs.py::test_webroot_exists_and_serves_via_nginx\nPASSED ../tests/test_outputs.py::test_ssh_listening_on_22\nPASSED ../tests/test_outputs.py::test_zz_end_to_end_clone_push_curl\n============================== 8 passed in 2.54s ===============================\n",
+  "ctrf": {
+    "results": {
+      "tool": {
+        "name": "pytest",
+        "version": "8.4.1"
+      },
+      "summary": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "skipped": 0,
+        "pending": 0,
+        "other": 0,
+        "start": 1787939796.026923,
+        "stop": 1787939798.565583
+      },
+      "tests": [
+        {
+          "name": "test_outputs.py::test_packages_installed",
+          "status": "passed",
+          "duration": 0.0007727835327386856,
+          "start": 1787939796.0624156,
+          "stop": 1787939796.0634637,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_git_user_exists",
+          "status": "passed",
+          "duration": 0.0021624257788062096,
+          "start": 1787939796.0636687,
+          "stop": 1787939796.0660014,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_bare_repo_exists",
+          "status": "passed",
+          "duration": 0.0004767179489135742,
+          "start": 1787939796.0661833,
+          "stop": 1787939796.0668023,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_bare_repo_owned_by_git",
+          "status": "passed",
+          "duration": 0.0017704227939248085,
+          "start": 1787939796.0669835,
+          "stop": 1787939796.068926,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_post_receive_hook_installed",
+          "status": "passed",
+          "duration": 0.0004736827686429024,
+          "start": 1787939796.0691051,
+          "stop": 1787939796.069724,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_webroot_exists_and_serves_via_nginx",
+          "status": "passed",
+          "duration": 0.01221571583300829,
+          "start": 1787939796.0698988,
+          "stop": 1787939796.0822704,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_ssh_listening_on_22",
+          "status": "passed",
+          "duration": 0.0005050348117947578,
+          "start": 1787939796.082524,
+          "stop": 1787939796.0832026,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_zz_end_to_end_clone_push_curl",
+          "status": "passed",
+          "duration": 2.4816106790676713,
+          "start": 1787939796.083469,
+          "stop": 1787939798.5653412,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        }
+      ]
+    }
+  }
+}

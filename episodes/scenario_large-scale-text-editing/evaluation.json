@@ -1,0 +1,73 @@
+{
+  "reward": 1,
+  "passed": 5,
+  "total": 5,
+  "correctness": 1.0,
+  "cost_usd": 0.048091515000000015,
+  "verifier_stdout": "Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\nGet:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\nGet:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]\nGet:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]\nGet:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]\nFetched 10.2 MB in 1s (8858 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\ncurl is already the newest version (8.14.1-2+deb13u4).\n0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.\ndownloading uv 0.9.5 x86_64-unknown-linux-gnu\nno checksums to verify\ninstalling to /root/.local/bin\n  uv\n  uvx\neverything's installed!\n\nTo add $HOME/.local/bin to your PATH, either restart your shell or run:\n\n    source $HOME/.local/bin/env (sh, bash, zsh)\n    source $HOME/.local/bin/env.fish (fish)\nWARN: The following commands are shadowed by other commands in your PATH: uv uvx\nDownloading pygments (1.2MiB)\n Downloading pygments\nInstalled 6 packages in 13ms\n============================= test session starts ==============================\nplatform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0\nrootdir: /tests\nplugins: json-ctrf-0.3.5\ncollected 5 items\n\n../tests/test_outputs.py .....                                           [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED ../tests/test_outputs.py::test_apply_macros_exists\nPASSED ../tests/test_outputs.py::test_apply_macros_well_formed\nPASSED ../tests/test_outputs.py::test_apply_macros_runs\nPASSED ../tests/test_outputs.py::test_input_equiv_expected\nPASSED ../tests/test_outputs.py::test_macros_nonempty_and_efficient\n========================= 5 passed in 78.50s (0:01:18) =========================\n",
+  "ctrf": {
+    "results": {
+      "tool": {
+        "name": "pytest",
+        "version": "8.4.1"
+      },
+      "summary": {
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "pending": 0,
+        "other": 0,
+        "start": 1787942395.3709767,
+        "stop": 1787942473.8684633
+      },
+      "tests": [
+        {
+          "name": "test_outputs.py::test_apply_macros_exists",
+          "status": "passed",
+          "duration": 0.0005928222090005875,
+          "start": 1787942395.402518,
+          "stop": 1787942395.403348,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_apply_macros_well_formed",
+          "status": "passed",
+          "duration": 0.002592177130281925,
+          "start": 1787942395.4035432,
+          "stop": 1787942395.4063022,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_apply_macros_runs",
+          "status": "passed",
+          "duration": 78.26906993798912,
+          "start": 1787942395.4064763,
+          "stop": 1787942473.6757472,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_input_equiv_expected",
+          "status": "passed",
+          "duration": 0.1817395081743598,
+          "start": 1787942473.6759741,
+          "stop": 1787942473.8579524,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_macros_nonempty_and_efficient",
+          "status": "passed",
+          "duration": 0.009957103058695793,
+          "start": 1787942473.8581812,
+          "stop": 1787942473.8682787,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        }
+      ]
+    }
+  }
+}

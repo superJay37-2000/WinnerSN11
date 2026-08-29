@@ -1,0 +1,618 @@
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]
+Fetched 10.2 MB in 1s (8818 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.14.1-2+deb13u4).
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+downloading uv 0.9.5 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+WARN: The following commands are shadowed by other commands in your PATH: uv uvx
+tar (child): /app/deliverable.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 14ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 16 items
+
+../tests/test_outputs.py FFFFFFF.FFFFFFFF                                [100%]
+
+=================================== FAILURES ===================================
+________________________ test_serial_executable_exists _________________________
+
+    def test_serial_executable_exists():
+        """Check that the serial executable was compiled successfully."""
+        serial_path = Path("/app/serial")
+>       assert serial_path.exists(), f"Serial executable {serial_path} does not exist"
+E       AssertionError: Serial executable /app/serial does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/serial').exists
+
+/tests/test_outputs.py:13: AssertionError
+________________________ test_openmp_executable_exists _________________________
+
+    def test_openmp_executable_exists():
+        """Check that the OpenMP executable was compiled successfully."""
+        openmp_path = Path("/app/openmp")
+>       assert openmp_path.exists(), f"OpenMP executable {openmp_path} does not exist"
+E       AssertionError: OpenMP executable /app/openmp does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/openmp').exists
+
+/tests/test_outputs.py:22: AssertionError
+__________________________ test_mpi_executable_exists __________________________
+
+    def test_mpi_executable_exists():
+        """Check that the MPI executable was compiled successfully."""
+        mpi_path = Path("/app/mpi")
+>       assert mpi_path.exists(), f"MPI executable {mpi_path} does not exist"
+E       AssertionError: MPI executable /app/mpi does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/mpi').exists
+
+/tests/test_outputs.py:31: AssertionError
+_____________________________ test_makefile_exists _____________________________
+
+    def test_makefile_exists():
+        """Check that a Makefile was created for compilation."""
+        makefile_path = Path("/app/Makefile")
+>       assert makefile_path.exists(), f"Makefile {makefile_path} does not exist"
+E       AssertionError: Makefile /app/Makefile does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/Makefile').exists
+
+/tests/test_outputs.py:40: AssertionError
+__________________________ test_serial_output_exists ___________________________
+
+    def test_serial_output_exists():
+        """Check that serial version produced output file serial.txt."""
+        serial_out = Path("/app/serial.txt")
+>       assert serial_out.exists(), f"Serial output file {serial_out} does not exist"
+E       AssertionError: Serial output file /app/serial.txt does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/serial.txt').exists
+
+/tests/test_outputs.py:47: AssertionError
+__________________________ test_openmp_output_exists ___________________________
+
+    def test_openmp_output_exists():
+        """Check that OpenMP version produced output file openmp.txt."""
+        openmp_out = Path("/app/openmp.txt")
+>       assert openmp_out.exists(), f"OpenMP output file {openmp_out} does not exist"
+E       AssertionError: OpenMP output file /app/openmp.txt does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/openmp.txt').exists
+
+/tests/test_outputs.py:56: AssertionError
+____________________________ test_mpi_output_exists ____________________________
+
+    def test_mpi_output_exists():
+        """Check that MPI version produced output file mpi.txt."""
+        mpi_out = Path("/app/mpi.txt")
+>       assert mpi_out.exists(), f"MPI output file {mpi_out} does not exist"
+E       AssertionError: MPI output file /app/mpi.txt does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/mpi.txt').exists
+
+/tests/test_outputs.py:65: AssertionError
+_______________________ test_performance_summaries_exist _______________________
+
+    def test_performance_summaries_exist():
+        """Check that performance summary files were created."""
+        summary_files = ["serial_summary.txt", "openmp_summary.txt", "mpi_summary.txt"]
+    
+        for summary_file in summary_files:
+            file_path = Path(f"/app/{summary_file}")
+>           assert file_path.exists(), f"Summary file {file_path} does not exist"
+E           AssertionError: Summary file /app/serial_summary.txt does not exist
+E           assert False
+E            +  where False = exists()
+E            +    where exists = PosixPath('/app/serial_summary.txt').exists
+
+/tests/test_outputs.py:136: AssertionError
+______________________ test_particle_interactions_correct ______________________
+
+    def test_particle_interactions_correct():
+        """Check particles interact correctly based on min/avg distances from console."""
+        # Run executables and check their console output directly
+        executables = ["serial", "openmp", "mpi"]
+    
+        for exe in executables:
+            if exe == "mpi":
+                result = subprocess.run(
+                    [
+                        "mpirun",
+                        "-np",
+                        "2",
+                        "--allow-run-as-root",
+                        f"/app/{exe}",
+                        "-n",
+                        "100",
+                    ],
+                    capture_output=True,
+                    text=True,
+                    env={
+                        **os.environ,
+                        "OMPI_ALLOW_RUN_AS_ROOT": "1",
+                        "OMPI_ALLOW_RUN_AS_ROOT_CONFIRM": "1",
+                    },
+                )
+            elif exe == "openmp":
+                result = subprocess.run(
+                    [f"/app/{exe}", "-n", "100", "-p", "2"], capture_output=True, text=True
+                )
+            else:
+>               result = subprocess.run(
+                    [f"/app/{exe}", "-n", "100"], capture_output=True, text=True
+                )
+
+/tests/test_outputs.py:188: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/subprocess.py:554: in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/subprocess.py:1039: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/lib/python3.13/subprocess.py:1857: in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: None args: ['/app/serial', '-n', '100']>
+args = ['/app/serial', '-n', '100'], executable = '/app/serial', env = None
+restore_signals = True, close_fds = True, p2cread = -1, p2cwrite = -1
+c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
+
+    def _posix_spawn(self, args, executable, env, restore_signals, close_fds,
+                     p2cread, p2cwrite,
+                     c2pread, c2pwrite,
+                     errread, errwrite):
+        """Execute program using os.posix_spawn()."""
+        kwargs = {}
+        if restore_signals:
+            # See _Py_RestoreSignals() in Python/pylifecycle.c
+            sigset = []
+            for signame in ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ'):
+                signum = getattr(signal, signame, None)
+                if signum is not None:
+                    sigset.append(signum)
+            kwargs['setsigdef'] = sigset
+    
+        file_actions = []
+        for fd in (p2cwrite, c2pread, errread):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_CLOSE, fd))
+        for fd, fd2 in (
+            (p2cread, 0),
+            (c2pwrite, 1),
+            (errwrite, 2),
+        ):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_DUP2, fd, fd2))
+    
+        if close_fds:
+            file_actions.append((os.POSIX_SPAWN_CLOSEFROM, 3))
+    
+        if file_actions:
+            kwargs['file_actions'] = file_actions
+    
+>       self.pid = os.posix_spawn(executable, args, env, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/serial'
+
+/usr/lib/python3.13/subprocess.py:1801: FileNotFoundError
+________________________ test_executables_actually_run _________________________
+
+    def test_executables_actually_run():
+        """Check that executables can be run with basic options."""
+        # Test serial version
+>       serial_result = subprocess.run(
+            ["/app/serial", "-n", "10"], capture_output=True, text=True
+        )
+
+/tests/test_outputs.py:221: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/subprocess.py:554: in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/subprocess.py:1039: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/lib/python3.13/subprocess.py:1857: in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: None args: ['/app/serial', '-n', '10']>
+args = ['/app/serial', '-n', '10'], executable = '/app/serial', env = None
+restore_signals = True, close_fds = True, p2cread = -1, p2cwrite = -1
+c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
+
+    def _posix_spawn(self, args, executable, env, restore_signals, close_fds,
+                     p2cread, p2cwrite,
+                     c2pread, c2pwrite,
+                     errread, errwrite):
+        """Execute program using os.posix_spawn()."""
+        kwargs = {}
+        if restore_signals:
+            # See _Py_RestoreSignals() in Python/pylifecycle.c
+            sigset = []
+            for signame in ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ'):
+                signum = getattr(signal, signame, None)
+                if signum is not None:
+                    sigset.append(signum)
+            kwargs['setsigdef'] = sigset
+    
+        file_actions = []
+        for fd in (p2cwrite, c2pread, errread):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_CLOSE, fd))
+        for fd, fd2 in (
+            (p2cread, 0),
+            (c2pwrite, 1),
+            (errwrite, 2),
+        ):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_DUP2, fd, fd2))
+    
+        if close_fds:
+            file_actions.append((os.POSIX_SPAWN_CLOSEFROM, 3))
+    
+        if file_actions:
+            kwargs['file_actions'] = file_actions
+    
+>       self.pid = os.posix_spawn(executable, args, env, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/serial'
+
+/usr/lib/python3.13/subprocess.py:1801: FileNotFoundError
+__________________________ test_command_line_options ___________________________
+
+    def test_command_line_options():
+        """Check that executables support required command-line options."""
+        import tempfile
+    
+        with tempfile.TemporaryDirectory() as tmpdir:
+            # Test -o option for output file
+            output_file = f"{tmpdir}/test_output.txt"
+            summary_file = f"{tmpdir}/test_summary.txt"
+    
+            # Test serial with -o and -s options
+>           result = subprocess.run(
+                ["/app/serial", "-n", "10", "-o", output_file, "-s", summary_file],
+                capture_output=True,
+                text=True,
+            )
+
+/tests/test_outputs.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/subprocess.py:554: in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/subprocess.py:1039: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/lib/python3.13/subprocess.py:1857: in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: None args: ['/app/serial', '-n', '10', '-o', '/tmp/tmpju...>
+args = ['/app/serial', '-n', '10', '-o', '/tmp/tmpjunlg6sz/test_output.txt', '-s', ...]
+executable = '/app/serial', env = None, restore_signals = True, close_fds = True
+p2cread = -1, p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13
+errwrite = 14
+
+    def _posix_spawn(self, args, executable, env, restore_signals, close_fds,
+                     p2cread, p2cwrite,
+                     c2pread, c2pwrite,
+                     errread, errwrite):
+        """Execute program using os.posix_spawn()."""
+        kwargs = {}
+        if restore_signals:
+            # See _Py_RestoreSignals() in Python/pylifecycle.c
+            sigset = []
+            for signame in ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ'):
+                signum = getattr(signal, signame, None)
+                if signum is not None:
+                    sigset.append(signum)
+            kwargs['setsigdef'] = sigset
+    
+        file_actions = []
+        for fd in (p2cwrite, c2pread, errread):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_CLOSE, fd))
+        for fd, fd2 in (
+            (p2cread, 0),
+            (c2pwrite, 1),
+            (errwrite, 2),
+        ):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_DUP2, fd, fd2))
+    
+        if close_fds:
+            file_actions.append((os.POSIX_SPAWN_CLOSEFROM, 3))
+    
+        if file_actions:
+            kwargs['file_actions'] = file_actions
+    
+>       self.pid = os.posix_spawn(executable, args, env, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/serial'
+
+/usr/lib/python3.13/subprocess.py:1801: FileNotFoundError
+___________________ test_parallel_implementations_consistent ___________________
+
+    def test_parallel_implementations_consistent():
+        """Check that all three implementations produce consistent physics results."""
+        # Run all implementations multiple times and collect averaged results
+        num_runs = 5
+        results = {
+            "serial": {"absmin": [], "absavg": []},
+            "openmp": {"absmin": [], "absavg": []},
+            "mpi": {"absmin": [], "absavg": []},
+        }
+    
+        for run in range(num_runs):
+            # Run serial
+>           serial_result = subprocess.run(
+                ["/app/serial", "-n", "100"], capture_output=True, text=True
+            )
+
+/tests/test_outputs.py:420: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/subprocess.py:554: in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/subprocess.py:1039: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/lib/python3.13/subprocess.py:1857: in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: None args: ['/app/serial', '-n', '100']>
+args = ['/app/serial', '-n', '100'], executable = '/app/serial', env = None
+restore_signals = True, close_fds = True, p2cread = -1, p2cwrite = -1
+c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
+
+    def _posix_spawn(self, args, executable, env, restore_signals, close_fds,
+                     p2cread, p2cwrite,
+                     c2pread, c2pwrite,
+                     errread, errwrite):
+        """Execute program using os.posix_spawn()."""
+        kwargs = {}
+        if restore_signals:
+            # See _Py_RestoreSignals() in Python/pylifecycle.c
+            sigset = []
+            for signame in ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ'):
+                signum = getattr(signal, signame, None)
+                if signum is not None:
+                    sigset.append(signum)
+            kwargs['setsigdef'] = sigset
+    
+        file_actions = []
+        for fd in (p2cwrite, c2pread, errread):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_CLOSE, fd))
+        for fd, fd2 in (
+            (p2cread, 0),
+            (c2pwrite, 1),
+            (errwrite, 2),
+        ):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_DUP2, fd, fd2))
+    
+        if close_fds:
+            file_actions.append((os.POSIX_SPAWN_CLOSEFROM, 3))
+    
+        if file_actions:
+            kwargs['file_actions'] = file_actions
+    
+>       self.pid = os.posix_spawn(executable, args, env, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/serial'
+
+/usr/lib/python3.13/subprocess.py:1801: FileNotFoundError
+_______________________ test_performance_timing_recorded _______________________
+
+    def test_performance_timing_recorded():
+        """Verify that all implementations record execution times in summary files."""
+        # Read timing data from summary files
+        serial_time = None
+        openmp_time = None
+        mpi_time = None
+    
+        # Get serial time
+        serial_summary = Path("/app/serial_summary.txt")
+        if serial_summary.exists():
+            content = serial_summary.read_text().strip().split()
+            serial_time = float(content[-1])
+    
+        # Get OpenMP time (2 threads)
+        openmp_summary = Path("/app/openmp_summary.txt")
+        if openmp_summary.exists():
+            content = openmp_summary.read_text().strip().split()
+            openmp_time = float(content[-1])
+            threads = int(content[1])
+            assert threads == 2, f"Expected 2 threads, got {threads}"
+    
+        # Get MPI time (2 processes)
+        mpi_summary = Path("/app/mpi_summary.txt")
+        if mpi_summary.exists():
+            content = mpi_summary.read_text().strip().split()
+            mpi_time = float(content[-1])
+            procs = int(content[1])
+            assert procs == 2, f"Expected 2 processes, got {procs}"
+    
+>       assert serial_time is not None, "Could not get serial execution time"
+E       AssertionError: Could not get serial execution time
+E       assert None is not None
+
+/tests/test_outputs.py:523: AssertionError
+______________________ test_physics_consistency_over_time ______________________
+
+    def test_physics_consistency_over_time():
+        """Verify that particle positions evolve consistently across implementations."""
+        # Check that output files contain multiple timesteps
+        output_files = {
+            "serial": Path("/app/serial.txt"),
+            "openmp": Path("/app/openmp.txt"),
+            "mpi": Path("/app/mpi.txt"),
+        }
+    
+        particle_counts = {}
+        first_positions = {}
+        last_positions = {}
+    
+        for impl, file_path in output_files.items():
+            if file_path.exists():
+                with open(file_path, "r") as f:
+                    lines = f.readlines()
+    
+                    # Parse header
+                    header = lines[0].strip().split()
+                    n = int(header[0])
+                    particle_counts[impl] = n
+    
+                    # Get first set of particle positions
+                    first_positions[impl] = []
+                    for i in range(1, min(n + 1, len(lines))):
+                        if lines[i].strip():
+                            x, y = map(float, lines[i].strip().split())
+                            first_positions[impl].append((x, y))
+    
+                    # Get last set of particle positions (should be different if simulation)
+                    last_positions[impl] = []
+                    start_idx = max(1, len(lines) - n)
+                    for i in range(start_idx, len(lines)):
+                        if lines[i].strip():
+                            x, y = map(float, lines[i].strip().split())
+                            last_positions[impl].append((x, y))
+    
+        # Verify all implementations used same particle count
+>       assert len(set(particle_counts.values())) == 1, (
+            "All implementations should use the same particle count"
+        )
+E       AssertionError: All implementations should use the same particle count
+E       assert 0 == 1
+E        +  where 0 = len(set())
+E        +    where set() = set(dict_values([]))
+E        +      where dict_values([]) = <built-in method values of dict object at 0x7d0443ac7bc0>()
+E        +        where <built-in method values of dict object at 0x7d0443ac7bc0> = {}.values
+
+/tests/test_outputs.py:572: AssertionError
+___________________________ test_complexity_scaling ____________________________
+
+    def test_complexity_scaling():
+        """Verify that implementations achieve O(n) complexity with spatial binning."""
+        import tempfile
+        import time
+    
+        # Test with different particle counts to verify O(n) scaling
+        test_sizes = [50, 100, 200]
+        timings = {"serial": [], "openmp": [], "mpi": []}
+    
+        with tempfile.TemporaryDirectory():
+            for n in test_sizes:
+                # Run serial version
+                start = time.time()
+>               result = subprocess.run(
+                    ["/app/serial", "-n", str(n)], capture_output=True, text=True
+                )
+
+/tests/test_outputs.py:606: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.13/subprocess.py:554: in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/subprocess.py:1039: in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+/usr/lib/python3.13/subprocess.py:1857: in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: None args: ['/app/serial', '-n', '50']>
+args = ['/app/serial', '-n', '50'], executable = '/app/serial', env = None
+restore_signals = True, close_fds = True, p2cread = -1, p2cwrite = -1
+c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
+
+    def _posix_spawn(self, args, executable, env, restore_signals, close_fds,
+                     p2cread, p2cwrite,
+                     c2pread, c2pwrite,
+                     errread, errwrite):
+        """Execute program using os.posix_spawn()."""
+        kwargs = {}
+        if restore_signals:
+            # See _Py_RestoreSignals() in Python/pylifecycle.c
+            sigset = []
+            for signame in ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ'):
+                signum = getattr(signal, signame, None)
+                if signum is not None:
+                    sigset.append(signum)
+            kwargs['setsigdef'] = sigset
+    
+        file_actions = []
+        for fd in (p2cwrite, c2pread, errread):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_CLOSE, fd))
+        for fd, fd2 in (
+            (p2cread, 0),
+            (c2pwrite, 1),
+            (errwrite, 2),
+        ):
+            if fd != -1:
+                file_actions.append((os.POSIX_SPAWN_DUP2, fd, fd2))
+    
+        if close_fds:
+            file_actions.append((os.POSIX_SPAWN_CLOSEFROM, 3))
+    
+        if file_actions:
+            kwargs['file_actions'] = file_actions
+    
+>       self.pid = os.posix_spawn(executable, args, env, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/serial'
+
+/usr/lib/python3.13/subprocess.py:1801: FileNotFoundError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_output_format
+FAILED ../tests/test_outputs.py::test_serial_executable_exists - AssertionErr...
+FAILED ../tests/test_outputs.py::test_openmp_executable_exists - AssertionErr...
+FAILED ../tests/test_outputs.py::test_mpi_executable_exists - AssertionError:...
+FAILED ../tests/test_outputs.py::test_makefile_exists - AssertionError: Makef...
+FAILED ../tests/test_outputs.py::test_serial_output_exists - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_openmp_output_exists - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_mpi_output_exists - AssertionError: MPI...
+FAILED ../tests/test_outputs.py::test_performance_summaries_exist - Assertion...
+FAILED ../tests/test_outputs.py::test_particle_interactions_correct - FileNot...
+FAILED ../tests/test_outputs.py::test_executables_actually_run - FileNotFound...
+FAILED ../tests/test_outputs.py::test_command_line_options - FileNotFoundErro...
+FAILED ../tests/test_outputs.py::test_parallel_implementations_consistent - F...
+FAILED ../tests/test_outputs.py::test_performance_timing_recorded - Assertion...
+FAILED ../tests/test_outputs.py::test_physics_consistency_over_time - Asserti...
+FAILED ../tests/test_outputs.py::test_complexity_scaling - FileNotFoundError:...
+========================= 15 failed, 1 passed in 0.40s =========================

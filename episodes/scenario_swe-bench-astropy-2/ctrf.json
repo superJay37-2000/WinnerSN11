@@ -1,0 +1,65 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787945852.9144602,
+      "stop": 1787945860.902571
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_agent_produced_patch_file",
+        "status": "passed",
+        "duration": 0.0006861211732029915,
+        "start": 1787945852.9309387,
+        "stop": 1787945852.93195,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_patch_applied_cleanly",
+        "status": "passed",
+        "duration": 0.0005764756351709366,
+        "start": 1787945852.9321887,
+        "stop": 1787945852.93298,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_existing_uppercase_roundtrip_still_passes",
+        "status": "passed",
+        "duration": 2.665488506667316,
+        "start": 1787945852.9332073,
+        "stop": 1787945855.5993888,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_lowercase_roundtrip_now_passes",
+        "status": "passed",
+        "duration": 2.62273782864213,
+        "start": 1787945855.6000347,
+        "stop": 1787945858.2234955,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_other_qdp_tests_still_pass",
+        "status": "passed",
+        "duration": 2.6772204488515854,
+        "start": 1787945858.2241561,
+        "stop": 1787945860.9020298,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

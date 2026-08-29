@@ -1,0 +1,134 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 12,
+      "passed": 10,
+      "failed": 2,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787945960.979611,
+      "stop": 1787945961.2078328
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_output_files_exist",
+        "status": "passed",
+        "duration": 0.0005236556753516197,
+        "start": 1787945961.0081067,
+        "stop": 1787945961.0088344,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_tree_map_hash_unchanged",
+        "status": "passed",
+        "duration": 0.003726476803421974,
+        "start": 1787945961.0090191,
+        "stop": 1787945961.0129204,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_directory_reconstruction_and_comparison",
+        "status": "passed",
+        "duration": 0.022522627376019955,
+        "start": 1787945961.0130894,
+        "stop": 1787945961.0357494,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_files_and_directories_created",
+        "status": "passed",
+        "duration": 0.02305425889790058,
+        "start": 1787945961.035921,
+        "stop": 1787945961.0591266,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_files_are_zero_byte",
+        "status": "passed",
+        "duration": 0.02476866263896227,
+        "start": 1787945961.0593143,
+        "stop": 1787945961.0842328,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_directory_permissions",
+        "status": "passed",
+        "duration": 0.023633011616766453,
+        "start": 1787945961.084411,
+        "stop": 1787945961.1081977,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_script_is_reproducible",
+        "status": "passed",
+        "duration": 0.04980992339551449,
+        "start": 1787945961.1083677,
+        "stop": 1787945961.1583245,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_tree_command_availability",
+        "status": "passed",
+        "duration": 0.0012605208903551102,
+        "start": 1787945961.158498,
+        "stop": 1787945961.159892,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_structure.py::test_directory_count_matches",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.023646453395485878,
+        "start": 1787945961.160233,
+        "stop": 1787945961.1971278,
+        "retries": 0,
+        "file_path": "test_structure.py",
+        "trace": "def test_directory_count_matches():\n        exp_dirs, _ = _parse_expected()\n        act_dirs, _ = _walk_actual()\n>       assert len(act_dirs) == len(exp_dirs), (\n            f\"expected {len(exp_dirs)} directories, reconstructed {len(act_dirs)}\"\n        )\nE       AssertionError: expected 0 directories, reconstructed 69\nE       assert 69 == 0\nE        +  where 69 = len({'-config', 'archive', 'data', 'documents', 'leve!l1_5]', 'leve!l1_5]/^sub_3', ...})\nE        +  and   0 = len(set())\n\n/tests/test_structure.py:78: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_structure.py::test_file_count_matches",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0025529228150844574,
+        "start": 1787945961.1972966,
+        "stop": 1787945961.2021742,
+        "retries": 0,
+        "file_path": "test_structure.py",
+        "trace": "def test_file_count_matches():\n        _, exp_files = _parse_expected()\n        _, act_files = _walk_actual()\n>       assert len(act_files) == len(exp_files), (\n            f\"expected {len(exp_files)} files, reconstructed {len(act_files)}\"\n        )\nE       AssertionError: expected 0 files, reconstructed 149\nE       assert 149 == 0\nE        +  where 149 = len({'-config/file109', '-config/file55(', '-config/file60', '-config/file85', ']file49', 'archive/%fi?le21', ...})\nE        +  and   0 = len(set())\n\n/tests/test_structure.py:86: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_structure.py::test_all_directories_present",
+        "status": "passed",
+        "duration": 0.0023773331195116043,
+        "start": 1787945961.2023373,
+        "stop": 1787945961.2048585,
+        "retries": 0,
+        "file_path": "test_structure.py"
+      },
+      {
+        "name": "test_structure.py::test_all_files_present",
+        "status": "passed",
+        "duration": 0.0024672653526067734,
+        "start": 1787945961.2050261,
+        "stop": 1787945961.2076373,
+        "retries": 0,
+        "file_path": "test_structure.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "reward": 1,
+  "passed": 12,
+  "total": 12,
+  "correctness": 1.0,
+  "cost_usd": 0.017803445,
+  "verifier_stdout": "Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\nGet:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\nGet:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]\nGet:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]\nGet:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]\nFetched 10.2 MB in 1s (9066 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\ncurl is already the newest version (8.14.1-2+deb13u4).\n0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.\ndownloading uv 0.9.5 x86_64-unknown-linux-gnu\nno checksums to verify\ninstalling to /root/.local/bin\n  uv\n  uvx\neverything's installed!\n\nTo add $HOME/.local/bin to your PATH, either restart your shell or run:\n\n    source $HOME/.local/bin/env (sh, bash, zsh)\n    source $HOME/.local/bin/env.fish (fish)\nWARN: The following commands are shadowed by other commands in your PATH: uv uvx\nDownloading pygments (1.2MiB)\n Downloading pygments\nInstalled 6 packages in 13ms\n============================= test session starts ==============================\nplatform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0\nrootdir: /tests\nplugins: json-ctrf-0.3.5\ncollected 12 items\n\n../tests/test_outputs.py ............                                    [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED ../tests/test_outputs.py::test_build_script_exists\nPASSED ../tests/test_outputs.py::test_reproducible_builds\nPASSED ../tests/test_outputs.py::test_exclusions\nPASSED ../tests/test_outputs.py::test_line_endings\nPASSED ../tests/test_outputs.py::test_permissions\nPASSED ../tests/test_outputs.py::test_metadata\nPASSED ../tests/test_outputs.py::test_symlinks\nPASSED ../tests/test_outputs.py::test_source_date_epoch\nPASSED ../tests/test_outputs.py::test_performance_constraints\nPASSED ../tests/test_outputs.py::test_0600_exclusion\nPASSED ../tests/test_outputs.py::test_edge_cases\nPASSED ../tests/test_outputs.py::test_build_script_creates_archive\n============================== 12 passed in 5.97s ==============================\n",
+  "ctrf": {
+    "results": {
+      "tool": {
+        "name": "pytest",
+        "version": "8.4.1"
+      },
+      "summary": {
+        "tests": 12,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "pending": 0,
+        "other": 0,
+        "start": 1787940250.4981153,
+        "stop": 1787940256.4713178
+      },
+      "tests": [
+        {
+          "name": "test_outputs.py::test_build_script_exists",
+          "status": "passed",
+          "duration": 0.0005314089357852936,
+          "start": 1787940250.5319397,
+          "stop": 1787940250.5326784,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_reproducible_builds",
+          "status": "passed",
+          "duration": 1.0583386206999421,
+          "start": 1787940250.532891,
+          "stop": 1787940251.5914538,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_exclusions",
+          "status": "passed",
+          "duration": 0.35532950703054667,
+          "start": 1787940251.5916905,
+          "stop": 1787940251.9472253,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_line_endings",
+          "status": "passed",
+          "duration": 0.3654294675216079,
+          "start": 1787940251.9474642,
+          "stop": 1787940252.3131108,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_permissions",
+          "status": "passed",
+          "duration": 0.3513741623610258,
+          "start": 1787940252.313339,
+          "stop": 1787940252.6649644,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_metadata",
+          "status": "passed",
+          "duration": 0.3538945494219661,
+          "start": 1787940252.6652036,
+          "stop": 1787940253.019333,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_symlinks",
+          "status": "passed",
+          "duration": 0.35410060081630945,
+          "start": 1787940253.0195613,
+          "stop": 1787940253.3738878,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_source_date_epoch",
+          "status": "passed",
+          "duration": 0.35057244915515184,
+          "start": 1787940253.374148,
+          "stop": 1787940253.7249525,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_performance_constraints",
+          "status": "passed",
+          "duration": 1.6803174559026957,
+          "start": 1787940253.7252047,
+          "stop": 1787940255.405755,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_0600_exclusion",
+          "status": "passed",
+          "duration": 0.3534551039338112,
+          "start": 1787940255.4059935,
+          "stop": 1787940255.7596593,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_edge_cases",
+          "status": "passed",
+          "duration": 0.349695174023509,
+          "start": 1787940255.7599053,
+          "stop": 1787940256.1098158,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        },
+        {
+          "name": "test_outputs.py::test_build_script_creates_archive",
+          "status": "passed",
+          "duration": 0.36070818081498146,
+          "start": 1787940256.1100423,
+          "stop": 1787940256.471018,
+          "retries": 0,
+          "file_path": "test_outputs.py"
+        }
+      ]
+    }
+  }
+}

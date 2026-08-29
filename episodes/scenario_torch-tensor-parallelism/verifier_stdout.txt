@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 13 items
+
+../tests/test_outputs.py .............                                   [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_parallel_linear_exists
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws1_bias_true
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws1_bias_true
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws1_bias_false
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws1_bias_false
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws2_bias_true
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws2_bias_true
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws2_bias_false
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws2_bias_false
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws4_bias_true
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws4_bias_true
+PASSED ../tests/test_outputs.py::test_column_parallel_linear_ws4_bias_false
+PASSED ../tests/test_outputs.py::test_row_parallel_linear_ws4_bias_false
+============================= 13 passed in 26.84s ==============================

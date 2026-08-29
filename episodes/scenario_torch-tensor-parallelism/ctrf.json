@@ -1,0 +1,137 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787945569.8423617,
+      "stop": 1787945596.6837313
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_parallel_linear_exists",
+        "status": "passed",
+        "duration": 0.0006099632009863853,
+        "start": 1787945571.074177,
+        "stop": 1787945571.0750554,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws1_bias_true",
+        "status": "passed",
+        "duration": 1.5993408635258675,
+        "start": 1787945571.0752547,
+        "stop": 1787945572.674836,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws1_bias_true",
+        "status": "passed",
+        "duration": 1.5794344395399094,
+        "start": 1787945572.6750875,
+        "stop": 1787945574.2547348,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws1_bias_false",
+        "status": "passed",
+        "duration": 1.5665734624490142,
+        "start": 1787945574.254984,
+        "stop": 1787945575.8217669,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws1_bias_false",
+        "status": "passed",
+        "duration": 1.5770134925842285,
+        "start": 1787945575.822071,
+        "stop": 1787945577.3993008,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws2_bias_true",
+        "status": "passed",
+        "duration": 1.7673422396183014,
+        "start": 1787945577.3995492,
+        "stop": 1787945579.167147,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws2_bias_true",
+        "status": "passed",
+        "duration": 1.8012700444087386,
+        "start": 1787945579.1673903,
+        "stop": 1787945580.9689023,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws2_bias_false",
+        "status": "passed",
+        "duration": 1.772815816104412,
+        "start": 1787945580.9691613,
+        "stop": 1787945582.742194,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws2_bias_false",
+        "status": "passed",
+        "duration": 1.8021198930218816,
+        "start": 1787945582.7424357,
+        "stop": 1787945584.5447872,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws4_bias_true",
+        "status": "passed",
+        "duration": 2.930852184072137,
+        "start": 1787945584.5450294,
+        "stop": 1787945587.4762018,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws4_bias_true",
+        "status": "passed",
+        "duration": 3.3487087916582823,
+        "start": 1787945587.4764583,
+        "stop": 1787945590.8253849,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_column_parallel_linear_ws4_bias_false",
+        "status": "passed",
+        "duration": 2.820761965587735,
+        "start": 1787945590.825638,
+        "stop": 1787945593.6466432,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_row_parallel_linear_ws4_bias_false",
+        "status": "passed",
+        "duration": 3.036242825910449,
+        "start": 1787945593.6469133,
+        "stop": 1787945596.6833975,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 13,
+      "passed": 12,
+      "failed": 1,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787939793.1512501,
+      "stop": 1787939799.646481
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_wav_file_exists",
+        "status": "passed",
+        "duration": 0.0005949912592768669,
+        "start": 1787939793.7315097,
+        "stop": 1787939793.7323515,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_audioproc_script_exists",
+        "status": "passed",
+        "duration": 0.00044475123286247253,
+        "start": 1787939793.732555,
+        "stop": 1787939793.733148,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_wav_properties",
+        "status": "passed",
+        "duration": 0.0017906557768583298,
+        "start": 1787939793.7333205,
+        "stop": 1787939793.7352512,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_mag_csv_exists",
+        "status": "passed",
+        "duration": 0.000430242158472538,
+        "start": 1787939793.7354488,
+        "stop": 1787939793.7360122,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_mag_csv_structure",
+        "status": "passed",
+        "duration": 0.13733191415667534,
+        "start": 1787939793.736188,
+        "stop": 1787939793.8737402,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_peaks_csv_exists",
+        "status": "passed",
+        "duration": 0.0005174856632947922,
+        "start": 1787939793.8740063,
+        "stop": 1787939793.874682,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_peaks_csv_structure",
+        "status": "passed",
+        "duration": 0.0008340468630194664,
+        "start": 1787939793.874901,
+        "stop": 1787939793.8758938,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_peaks_accuracy",
+        "status": "passed",
+        "duration": 0.001239047385752201,
+        "start": 1787939793.8760698,
+        "stop": 1787939793.8774674,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_mag_csv_matches_scipy_stft",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 1.2963395323604345,
+        "start": 1787939793.8776793,
+        "stop": 1787939795.2314012,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def test_mag_csv_matches_scipy_stft():\n        \"\"\"mag.csv equals STFT (Hann, hop=256, n_fft=1024, center=False) using scipy.\"\"\"\n        # load wav as float32\n        sr, data = wavfile.read(Path(\"/app/data/clip.wav\"))\n        x = data.astype(np.float32) / 32767.0\n    \n        mag_csv = _load_mag_csv_array()\n    \n        # Compute STFT using scipy\n        from scipy.signal import stft as sp_stft\n    \n        f, t, Zxx = sp_stft(\n            x,\n            fs=sr,\n            window=\"hann\",\n            nperseg=1024,\n            noverlap=1024 - 256,\n            nfft=1024,\n            boundary=None,\n            padded=False,\n            return_onesided=True,\n        )\n        mag_ref = np.abs(Zxx)  # [513, 184]\n    \n        assert mag_csv.shape == mag_ref.shape == (513, 184)\n        # allow tiny CSV float round trip; should be extremely close\n>       assert np.allclose(mag_csv, mag_ref, rtol=1e-5, atol=1e-6), (\n            \"mag.csv does not match Hann STFT magnitude.\"\n        )\nE       AssertionError: mag.csv does not match Hann STFT magnitude.\nE       assert False\nE        +  where False = <function allclose at 0x744be250d770>(array([[2.9133621e-06, 3.2495825e-07, 1.9251129e-06, ..., 2.0872005e-06,\\n        2.4730398e-06, 5.5025507e-06],\\n      ...327390e-07, 2.3545407e-07, ..., 2.7879977e-07,\\n        8.8112870e-08, 3.0248282e-07]], shape=(513, 184), dtype=float32), array([[3.05387721e-06, 2.15904947e-07, 1.10377732e-06, ...,\\n        2.10663347e-06, 2.34087383e-06, 5.50822006e-06],\\n..., 4.39977157e-08, ...,\\n        3.18865204e-07, 4.09954737e-07, 1.02154445e-07]],\\n      shape=(513, 184), dtype=float32), rtol=1e-05, atol=1e-06)\nE        +    where <function allclose at 0x744be250d770> = np.allclose\n\n/tests/test_outputs.py:205: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_peaks_are_true_top3_and_sorted",
+        "status": "passed",
+        "duration": 0.1913433177396655,
+        "start": 1787939795.2316313,
+        "stop": 1787939795.4232044,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_audioproc_outputs_without_peaks",
+        "status": "passed",
+        "duration": 1.871502386406064,
+        "start": 1787939795.4234705,
+        "stop": 1787939797.2952507,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_audioproc_calls_scipy_stft",
+        "status": "passed",
+        "duration": 1.995829489082098,
+        "start": 1787939797.2955012,
+        "stop": 1787939799.2916539,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_cli_pipeline_enforces_awk_for_peaks",
+        "status": "passed",
+        "duration": 0.3539422703906894,
+        "start": 1787939799.2920105,
+        "stop": 1787939799.6462061,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

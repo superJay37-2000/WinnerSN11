@@ -1,0 +1,155 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787943671.0135448,
+      "stop": 1787943672.8362007
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_path_tsv_exists",
+        "status": "passed",
+        "duration": 0.0005010729655623436,
+        "start": 1787943671.0789328,
+        "stop": 1787943671.0796478,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_path_tsv_format",
+        "status": "passed",
+        "duration": 0.0006669964641332626,
+        "start": 1787943671.079851,
+        "stop": 1787943671.0806677,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_move_legality",
+        "status": "passed",
+        "duration": 0.0006615594029426575,
+        "start": 1787943671.0808623,
+        "stop": 1787943671.0816782,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_path_reaches_goal",
+        "status": "passed",
+        "duration": 0.0005661733448505402,
+        "start": 1787943671.0818923,
+        "stop": 1787943671.082595,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_path_starts_from_start",
+        "status": "passed",
+        "duration": 0.0005967067554593086,
+        "start": 1787943671.0827863,
+        "stop": 1787943671.0835748,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_path_sequence_connected",
+        "status": "passed",
+        "duration": 0.0006810147315263748,
+        "start": 1787943671.0837646,
+        "stop": 1787943671.084579,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_layers_csv_exists",
+        "status": "passed",
+        "duration": 0.0004877923056483269,
+        "start": 1787943671.084772,
+        "stop": 1787943671.0853903,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_layer_files_exist",
+        "status": "passed",
+        "duration": 0.07171339634805918,
+        "start": 1787943671.0855577,
+        "stop": 1787943671.1574395,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_optimal_path_length",
+        "status": "passed",
+        "duration": 0.03290090896189213,
+        "start": 1787943671.1576426,
+        "stop": 1787943671.1906888,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_parity_check",
+        "status": "passed",
+        "duration": 0.0004891511052846909,
+        "start": 1787943671.1909106,
+        "stop": 1787943671.1915343,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_layer_counts_sum_correctly",
+        "status": "passed",
+        "duration": 0.03092663548886776,
+        "start": 1787943671.191726,
+        "stop": 1787943671.222793,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_deterministic_canonical_representation",
+        "status": "passed",
+        "duration": 0.058404289186000824,
+        "start": 1787943671.2230096,
+        "stop": 1787943671.2815833,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_states_unique_across_layers",
+        "status": "passed",
+        "duration": 0.07383283134549856,
+        "start": 1787943671.2818172,
+        "stop": 1787943671.355849,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_input_files_integrity",
+        "status": "passed",
+        "duration": 0.0004753386601805687,
+        "start": 1787943671.3560815,
+        "stop": 1787943671.3566911,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_layers_are_exact_bfs_frontiers",
+        "status": "passed",
+        "duration": 1.4788733767345548,
+        "start": 1787943671.356889,
+        "stop": 1787943672.835968,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

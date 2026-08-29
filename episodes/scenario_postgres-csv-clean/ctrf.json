@@ -1,0 +1,146 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787943633.4736333,
+      "stop": 1787943633.5787458
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_cleaned_csv_file_exists",
+        "status": "passed",
+        "duration": 0.0005717845633625984,
+        "start": 1787943633.5297465,
+        "stop": 1787943633.5305521,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_cleaned_csv_has_header",
+        "status": "passed",
+        "duration": 0.0004634922370314598,
+        "start": 1787943633.5307705,
+        "stop": 1787943633.5313811,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_cleaned_csv_content",
+        "status": "passed",
+        "duration": 0.00044893939048051834,
+        "start": 1787943633.5315468,
+        "stop": 1787943633.5321372,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_duplicates_removed",
+        "status": "passed",
+        "duration": 0.00044023897498846054,
+        "start": 1787943633.5322936,
+        "stop": 1787943633.5328653,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_data_quality",
+        "status": "passed",
+        "duration": 0.00042858347296714783,
+        "start": 1787943633.5330248,
+        "stop": 1787943633.5335724,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_phone_format",
+        "status": "passed",
+        "duration": 0.0005020489916205406,
+        "start": 1787943633.5337434,
+        "stop": 1787943633.5343688,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_postgres_database_connection",
+        "status": "passed",
+        "duration": 0.006305014714598656,
+        "start": 1787943633.5345275,
+        "stop": 1787943633.5409997,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_postgres_table_structure",
+        "status": "passed",
+        "duration": 0.009912136942148209,
+        "start": 1787943633.541169,
+        "stop": 1787943633.5512106,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_postgres_data_consistency",
+        "status": "passed",
+        "duration": 0.0040442608296871185,
+        "start": 1787943633.5513942,
+        "stop": 1787943633.5556185,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_psql_commands_were_used",
+        "status": "passed",
+        "duration": 0.008799956180155277,
+        "start": 1787943633.5558834,
+        "stop": 1787943633.5649505,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_pg_stat_statements_shows_cleaning_and_copy_queries",
+        "status": "passed",
+        "duration": 0.006750418804585934,
+        "start": 1787943633.565117,
+        "stop": 1787943633.5720377,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_cleaned_csv_equals_customers_v1_csv",
+        "status": "passed",
+        "duration": 0.0009490624070167542,
+        "start": 1787943633.5722756,
+        "stop": 1787943633.573405,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_cleaned_csv_is_ordered_by_id",
+        "status": "passed",
+        "duration": 0.0005549294874072075,
+        "start": 1787943633.5735915,
+        "stop": 1787943633.5742805,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_postgres_matches_customers_v1_csv",
+        "status": "passed",
+        "duration": 0.0038909493014216423,
+        "start": 1787943633.574432,
+        "stop": 1787943633.5784957,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

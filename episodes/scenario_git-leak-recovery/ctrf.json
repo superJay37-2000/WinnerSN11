@@ -1,0 +1,74 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787941179.216502,
+      "stop": 1787941179.2666852
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_flag_file_exists_and_correct",
+        "status": "passed",
+        "duration": 0.0005921749398112297,
+        "start": 1787941179.2393703,
+        "stop": 1787941179.2401679,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_secrets_in_commits",
+        "status": "passed",
+        "duration": 0.005353104323148727,
+        "start": 1787941179.2403557,
+        "stop": 1787941179.2458596,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_good_commits_preserved",
+        "status": "passed",
+        "duration": 0.0028052236884832382,
+        "start": 1787941179.2460437,
+        "stop": 1787941179.248986,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_secrets_in_unreachable_objects",
+        "status": "passed",
+        "duration": 0.007664883509278297,
+        "start": 1787941179.2491524,
+        "stop": 1787941179.2569573,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_repository_contents_checksum",
+        "status": "passed",
+        "duration": 0.006064193323254585,
+        "start": 1787941179.257129,
+        "stop": 1787941179.2633367,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_scrub.py::test_secret_absent_from_object_database",
+        "status": "passed",
+        "duration": 0.0026970887556672096,
+        "start": 1787941179.2636876,
+        "stop": 1787941179.2665188,
+        "retries": 0,
+        "file_path": "test_scrub.py"
+      }
+    ]
+  }
+}

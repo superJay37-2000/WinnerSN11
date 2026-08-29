@@ -1,0 +1,100 @@
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9673 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [4412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [250 kB]
+Fetched 10.2 MB in 1s (8648 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.14.1-2+deb13u4).
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+downloading uv 0.9.5 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+WARN: The following commands are shadowed by other commands in your PATH: uv uvx
+Downloading pygments (1.2MiB)
+Downloading scipy (34.0MiB)
+Downloading numpy (15.9MiB)
+ Downloading pygments
+ Downloading numpy
+ Downloading scipy
+Installed 8 packages in 50ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 13 items
+
+../tests/test_outputs.py ........F....                                   [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_mag_csv_matches_scipy_stft ________________________
+
+    def test_mag_csv_matches_scipy_stft():
+        """mag.csv equals STFT (Hann, hop=256, n_fft=1024, center=False) using scipy."""
+        # load wav as float32
+        sr, data = wavfile.read(Path("/app/data/clip.wav"))
+        x = data.astype(np.float32) / 32767.0
+    
+        mag_csv = _load_mag_csv_array()
+    
+        # Compute STFT using scipy
+        from scipy.signal import stft as sp_stft
+    
+        f, t, Zxx = sp_stft(
+            x,
+            fs=sr,
+            window="hann",
+            nperseg=1024,
+            noverlap=1024 - 256,
+            nfft=1024,
+            boundary=None,
+            padded=False,
+            return_onesided=True,
+        )
+        mag_ref = np.abs(Zxx)  # [513, 184]
+    
+        assert mag_csv.shape == mag_ref.shape == (513, 184)
+        # allow tiny CSV float round trip; should be extremely close
+>       assert np.allclose(mag_csv, mag_ref, rtol=1e-5, atol=1e-6), (
+            "mag.csv does not match Hann STFT magnitude."
+        )
+E       AssertionError: mag.csv does not match Hann STFT magnitude.
+E       assert False
+E        +  where False = <function allclose at 0x744be250d770>(array([[2.9133621e-06, 3.2495825e-07, 1.9251129e-06, ..., 2.0872005e-06,\n        2.4730398e-06, 5.5025507e-06],\n      ...327390e-07, 2.3545407e-07, ..., 2.7879977e-07,\n        8.8112870e-08, 3.0248282e-07]], shape=(513, 184), dtype=float32), array([[3.05387721e-06, 2.15904947e-07, 1.10377732e-06, ...,\n        2.10663347e-06, 2.34087383e-06, 5.50822006e-06],\n..., 4.39977157e-08, ...,\n        3.18865204e-07, 4.09954737e-07, 1.02154445e-07]],\n      shape=(513, 184), dtype=float32), rtol=1e-05, atol=1e-06)
+E        +    where <function allclose at 0x744be250d770> = np.allclose
+
+/tests/test_outputs.py:205: AssertionError
+==================================== PASSES ====================================
+_____________________ test_audioproc_outputs_without_peaks _____________________
+----------------------------- Captured stdout call -----------------------------
+wrote /app/data/clip.wav and /app/data/mag.csv (184 frames x 513 bins)
+_______________________ test_audioproc_calls_scipy_stft ________________________
+----------------------------- Captured stdout call -----------------------------
+wrote /app/data/clip.wav and /app/data/mag.csv (184 frames x 513 bins)
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_wav_file_exists
+PASSED ../tests/test_outputs.py::test_audioproc_script_exists
+PASSED ../tests/test_outputs.py::test_wav_properties
+PASSED ../tests/test_outputs.py::test_mag_csv_exists
+PASSED ../tests/test_outputs.py::test_mag_csv_structure
+PASSED ../tests/test_outputs.py::test_peaks_csv_exists
+PASSED ../tests/test_outputs.py::test_peaks_csv_structure
+PASSED ../tests/test_outputs.py::test_peaks_accuracy
+PASSED ../tests/test_outputs.py::test_peaks_are_true_top3_and_sorted
+PASSED ../tests/test_outputs.py::test_audioproc_outputs_without_peaks
+PASSED ../tests/test_outputs.py::test_audioproc_calls_scipy_stft
+PASSED ../tests/test_outputs.py::test_cli_pipeline_enforces_awk_for_peaks
+FAILED ../tests/test_outputs.py::test_mag_csv_matches_scipy_stft - AssertionE...
+========================= 1 failed, 12 passed in 6.50s =========================

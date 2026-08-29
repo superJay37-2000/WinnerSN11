@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 9 items
+
+../tests/test_outputs.py .........                                       [100%]
+
+==================================== PASSES ====================================
+______________________ test_basic_test_function_executes _______________________
+----------------------------- Captured stdout call -----------------------------
+Running basic ABMIL test...
+✓ Forward pass completed successfully!
+Logits shape: torch.Size([1, 2]), Attention shape: torch.Size([50, 1])
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_abmil_file_exists
+PASSED ../tests/test_outputs.py::test_attention_mechanism_implementation
+PASSED ../tests/test_outputs.py::test_abmil_model_initialization
+PASSED ../tests/test_outputs.py::test_abmil_forward_pass_comprehensive
+PASSED ../tests/test_outputs.py::test_numerical_stability
+PASSED ../tests/test_outputs.py::test_gradient_flow
+PASSED ../tests/test_outputs.py::test_numerical_precision_dtypes
+PASSED ../tests/test_outputs.py::test_direct_model_execution
+PASSED ../tests/test_outputs.py::test_basic_test_function_executes
+============================== 9 passed in 1.25s ===============================

@@ -1,0 +1,330 @@
+2026-08-28 17:40:40,760 | INFO     | trajectoryrl.utils.github | Verifying submission: hash=62f2d0256a05…
+2026-08-28 17:40:40,947 | INFO     | httpx | HTTP Request: GET https://storage.googleapis.com/vibe-dev/traj-prod/45/DMT0fUodcT-VyO--.json "HTTP/1.1 200 OK"
+2026-08-28 17:40:40,952 | INFO     | trajectoryrl.utils.github | Verification passed for hash=62f2d0256a05…
+2026-08-28 17:40:40,952 | INFO     | trajectoryrl.utils.sandbox_harness | eval starting: pack_hash=62f2d0256a05, seed=2379532473, scenarios=['attention-mil', 'audio-synth-stft-peaks', 'configure-git-webserver', 'crack-7z-hash', 'custom-memory-heap-crash', 'db-wal-recovery', 'deterministic-tarball', 'fix-code-vulnerability', 'git-leak-recovery', 'git-multibranch', 'large-scale-text-editing', 'largest-eigenval', 'llm-inference-batching-scheduler', 'nginx-request-logging', 'parallel-particle-simulator', 'path-tracing', 'postgres-csv-clean', 'puzzle-solver', 'query-optimize', 'race-condition-fix', 'regex-chess', 'regex-engine-from-scratch', 'swe-bench-astropy-2', 'torch-tensor-parallelism', 'tree-directory-parser', 'write-compressor']
+2026-08-28 17:40:40,953 | INFO     | trajectoryrl.utils.sandbox_harness | Refreshing bench images before eval
+2026-08-28 17:40:40,959 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling sandbox-agent image: ghcr.io/trajectoryrl/sandbox-agent:latest
+2026-08-28 17:40:42,429 | INFO     | trajectoryrl.utils.sandbox_harness | Sandbox version: 4.0.23, harness: Hermes 0.20.5, scenarios: ['3d-model-format-legacy', 'attention-mil', 'audio-synth-stft-peaks', 'break-filter-js-from-html', 'cancel-async-tasks', 'configure-git-webserver', 'crack-7z-hash', 'custom-memory-heap-crash', 'db-wal-recovery', 'deterministic-tarball', 'fix-code-vulnerability', 'fix-git', 'git-leak-recovery', 'git-multibranch', 'kv-store-grpc', 'large-scale-text-editing', 'largest-eigenval', 'llm-inference-batching-scheduler', 'log-summary-date-ranges', 'nginx-request-logging', 'parallel-particle-simulator', 'path-tracing', 'pcap-to-netflow', 'postgres-csv-clean', 'puzzle-solver', 'query-optimize', 'race-condition-fix', 'regex-chess', 'regex-engine-from-scratch', 'schemelike-metacircular-eval', 'swe-bench-astropy-2', 'torch-tensor-parallelism', 'tree-directory-parser', 'vulnerable-secret', 'write-compressor']
+2026-08-28 17:40:42,912 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-3d-model-format-legacy:latest
+2026-08-28 17:40:43,959 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-attention-mil:latest
+2026-08-28 17:40:45,012 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-audio-synth-stft-peaks:latest
+2026-08-28 17:40:46,068 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-configure-git-webserver:latest
+2026-08-28 17:40:47,131 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-crack-7z-hash:latest
+2026-08-28 17:40:48,182 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-custom-memory-heap-crash:latest
+2026-08-28 17:40:49,210 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-db-wal-recovery:latest
+2026-08-28 17:40:50,261 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-deterministic-tarball:latest
+2026-08-28 17:40:51,418 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-fix-code-vulnerability:latest
+2026-08-28 17:40:52,460 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-git-leak-recovery:latest
+2026-08-28 17:40:53,513 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-git-multibranch:latest
+2026-08-28 17:40:54,531 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-large-scale-text-editing:latest
+2026-08-28 17:40:55,552 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-largest-eigenval:latest
+2026-08-28 17:40:56,620 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-llm-inference-batching-scheduler:latest
+2026-08-28 17:40:57,678 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-nginx-request-logging:latest
+2026-08-28 17:40:58,811 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-parallel-particle-simulator:latest
+2026-08-28 17:40:59,815 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-path-tracing:latest
+2026-08-28 17:41:00,856 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-pcap-to-netflow:latest
+2026-08-28 17:41:01,889 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-postgres-csv-clean:latest
+2026-08-28 17:41:02,974 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-puzzle-solver:latest
+2026-08-28 17:41:04,005 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-query-optimize:latest
+2026-08-28 17:41:05,054 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-race-condition-fix:latest
+2026-08-28 17:41:06,084 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-regex-chess:latest
+2026-08-28 17:41:07,122 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-regex-engine-from-scratch:latest
+2026-08-28 17:41:08,164 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-schemelike-metacircular-eval:latest
+2026-08-28 17:41:09,324 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-swe-bench-astropy-2:latest
+2026-08-28 17:41:10,338 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-torch-tensor-parallelism:latest
+2026-08-28 17:41:11,355 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-tree-directory-parser:latest
+2026-08-28 17:41:12,351 | INFO     | trajectoryrl.utils.sandbox_harness | Pulling scenario image: ghcr.io/trajectoryrl/scenario-write-compressor:latest
+2026-08-28 17:41:23,290 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] session start (scenarios=['attention-mil', 'audio-synth-stft-peaks', 'configure-git-webserver', 'crack-7z-hash', 'custom-memory-heap-crash', 'db-wal-recovery', 'deterministic-tarball', 'fix-code-vulnerability', 'git-leak-recovery', 'git-multibranch', 'large-scale-text-editing', 'largest-eigenval', 'llm-inference-batching-scheduler', 'nginx-request-logging', 'parallel-particle-simulator', 'path-tracing', 'postgres-csv-clean', 'puzzle-solver', 'query-optimize', 'race-condition-fix', 'regex-chess', 'regex-engine-from-scratch', 'swe-bench-astropy-2', 'torch-tensor-parallelism', 'tree-directory-parser', 'write-compressor'])
+2026-08-28 17:41:23,290 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] dispatching 26 scenarios with parallelism=3
+2026-08-28 17:41:23,291 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] attention-mil starting (image=ghcr.io/trajectoryrl/scenario-attention-mil:latest)
+2026-08-28 17:41:23,661 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:41:23,662 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] audio-synth-stft-peaks starting (image=ghcr.io/trajectoryrl/scenario-audio-synth-stft-peaks:latest)
+2026-08-28 17:41:24,037 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:41:24,039 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] configure-git-webserver starting (image=ghcr.io/trajectoryrl/scenario-configure-git-webserver:latest)
+2026-08-28 17:41:24,237 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:41:24,550 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:41:25,009 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:44:53,086 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 17:46:26,609 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 17:46:26,609 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 17:46:49,076 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 17:52:08,354 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] attention-mil hermes chat finished (exit=0, timed_out=False, 170846 chars)
+2026-08-28 17:52:08,602 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep0 (id=56de69353776)
+2026-08-28 17:52:08,751 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:52:12,939 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep0: reward=1 (exit_code=0)
+2026-08-28 17:52:12,950 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] attention-mil quality=1.000 (reward=1, 9/9 tests passed, cost=$0.0274)
+2026-08-28 17:52:18,524 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:52:18,660 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:52:19,040 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:52:19,041 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] crack-7z-hash starting (image=ghcr.io/trajectoryrl/scenario-crack-7z-hash:latest)
+2026-08-28 17:52:19,885 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:54:53,442 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 17:55:53,517 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] crack-7z-hash hermes chat finished (exit=0, timed_out=False, 20422 chars)
+2026-08-28 17:55:53,784 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep3 (id=c3b42a3f2e3f)
+2026-08-28 17:55:53,867 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:55:58,998 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep3: reward=1 (exit_code=0)
+2026-08-28 17:55:59,037 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] crack-7z-hash quality=1.000 (reward=1, 2/2 tests passed, cost=$0.0078)
+2026-08-28 17:56:04,608 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:04,761 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:05,138 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:05,139 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] custom-memory-heap-crash starting (image=ghcr.io/trajectoryrl/scenario-custom-memory-heap-crash:latest)
+2026-08-28 17:56:05,966 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:24,359 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] audio-synth-stft-peaks hermes chat finished (exit=None, timed_out=True, 324978 chars)
+2026-08-28 17:56:24,581 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:24,846 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] configure-git-webserver hermes chat finished (exit=None, timed_out=True, 375548 chars)
+2026-08-28 17:56:25,080 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:26,252 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep1 (id=6b5b0c437d80)
+2026-08-28 17:56:26,658 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep2 (id=04774e817827)
+2026-08-28 17:56:39,342 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep2: reward=1 (exit_code=0)
+2026-08-28 17:56:39,390 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] configure-git-webserver quality=1.000 (reward=1, 8/8 tests passed, cost=$0.0356)
+2026-08-28 17:56:39,962 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep1: reward=0 (exit_code=0)
+2026-08-28 17:56:40,102 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] audio-synth-stft-peaks quality=0.923 (reward=0, 12/13 tests passed, cost=$0.0363)
+2026-08-28 17:56:44,939 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:44,960 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:45,327 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:45,328 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] db-wal-recovery starting (image=ghcr.io/trajectoryrl/scenario-db-wal-recovery:latest)
+2026-08-28 17:56:45,681 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:45,786 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:46,154 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 17:56:46,155 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] deterministic-tarball starting (image=ghcr.io/trajectoryrl/scenario-deterministic-tarball:latest)
+2026-08-28 17:56:46,177 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 17:56:47,046 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:04:05,371 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] deterministic-tarball hermes chat finished (exit=0, timed_out=False, 216643 chars)
+2026-08-28 18:04:05,664 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep6 (id=680bfc0f533d)
+2026-08-28 18:04:05,798 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:04:16,889 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep6: reward=1 (exit_code=0)
+2026-08-28 18:04:16,933 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] deterministic-tarball quality=1.000 (reward=1, 12/12 tests passed, cost=$0.0178)
+2026-08-28 18:04:22,393 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:04:22,685 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:04:23,041 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:04:23,042 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] fix-code-vulnerability starting (image=ghcr.io/trajectoryrl/scenario-fix-code-vulnerability:latest)
+2026-08-28 18:04:23,922 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:04:53,792 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:06:51,313 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 18:06:51,313 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 18:07:13,298 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 18:11:15,476 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] db-wal-recovery hermes chat finished (exit=0, timed_out=False, 391149 chars)
+2026-08-28 18:11:15,802 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep5 (id=dd499e106ca5)
+2026-08-28 18:11:15,864 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:11:22,227 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep5: reward=1 (exit_code=0)
+2026-08-28 18:11:22,274 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] db-wal-recovery quality=1.000 (reward=1, 7/7 tests passed, cost=$0.0367)
+2026-08-28 18:11:27,701 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:11:27,851 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:11:28,226 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:11:28,227 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-leak-recovery starting (image=ghcr.io/trajectoryrl/scenario-git-leak-recovery:latest)
+2026-08-28 18:11:29,246 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:12:42,386 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] fix-code-vulnerability hermes chat finished (exit=0, timed_out=False, 198692 chars)
+2026-08-28 18:12:42,627 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:12:42,673 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep7 (id=5c052cf1878d)
+2026-08-28 18:12:43,143 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep7: reward=1 (exit_code=0)
+2026-08-28 18:12:43,156 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] fix-code-vulnerability quality=1.000 (reward=1, 6/6 tests passed, cost=$0.0308)
+2026-08-28 18:12:48,598 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:12:48,738 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:12:49,119 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:12:49,121 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-multibranch starting (image=ghcr.io/trajectoryrl/scenario-git-multibranch:latest)
+2026-08-28 18:12:50,052 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:14:54,186 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:19:33,853 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-leak-recovery hermes chat finished (exit=0, timed_out=False, 175787 chars)
+2026-08-28 18:19:34,124 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep8 (id=2c539df8dc7c)
+2026-08-28 18:19:34,256 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:19:39,697 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep8: reward=1 (exit_code=0)
+2026-08-28 18:19:39,742 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-leak-recovery quality=1.000 (reward=1, 6/6 tests passed, cost=$0.0197)
+2026-08-28 18:19:45,320 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:19:45,369 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:19:45,735 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:19:45,736 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] large-scale-text-editing starting (image=ghcr.io/trajectoryrl/scenario-large-scale-text-editing:latest)
+2026-08-28 18:19:46,549 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:24:54,481 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:25:10,428 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-multibranch hermes chat finished (exit=0, timed_out=False, 334947 chars)
+2026-08-28 18:25:10,685 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep9 (id=8c0016033299)
+2026-08-28 18:25:10,787 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:26:05,783 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] custom-memory-heap-crash hermes chat finished (exit=None, timed_out=True, 697306 chars)
+2026-08-28 18:26:06,139 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:26:07,181 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep4 (id=3b8f374b12f3)
+2026-08-28 18:26:19,248 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep4: reward=0 (exit_code=0)
+2026-08-28 18:26:19,293 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] custom-memory-heap-crash quality=0.833 (reward=0, 5/6 tests passed, cost=$0.0767)
+2026-08-28 18:26:20,963 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep9: reward=0 (exit_code=0)
+2026-08-28 18:26:21,008 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] git-multibranch quality=0.000 (reward=0, 0/4 tests passed, cost=$0.0361)
+2026-08-28 18:26:24,747 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:26:25,036 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:26:25,454 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:26:25,455 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] largest-eigenval starting (image=ghcr.io/trajectoryrl/scenario-largest-eigenval:latest)
+2026-08-28 18:26:26,318 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:26:26,481 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:26:26,630 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:26:27,011 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:26:27,013 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] llm-inference-batching-scheduler starting (image=ghcr.io/trajectoryrl/scenario-llm-inference-batching-scheduler:latest)
+2026-08-28 18:26:27,980 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:27:15,294 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 18:27:15,294 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 18:27:37,044 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 18:34:54,919 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:39:46,371 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] large-scale-text-editing hermes chat finished (exit=None, timed_out=True, 517055 chars)
+2026-08-28 18:39:46,708 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:39:49,092 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep10 (id=1abec613845e)
+2026-08-28 18:41:14,161 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep10: reward=1 (exit_code=0)
+2026-08-28 18:41:14,217 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] large-scale-text-editing quality=1.000 (reward=1, 5/5 tests passed, cost=$0.0481)
+2026-08-28 18:41:19,827 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:41:19,988 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:41:20,364 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:41:20,365 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] nginx-request-logging starting (image=ghcr.io/trajectoryrl/scenario-nginx-request-logging:latest)
+2026-08-28 18:41:21,152 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:41:26,134 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] largest-eigenval hermes chat finished (exit=None, timed_out=True, 323601 chars)
+2026-08-28 18:41:26,386 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:41:27,797 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep11 (id=f62d480a9748)
+2026-08-28 18:41:37,575 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep11: reward=0 (exit_code=0)
+2026-08-28 18:41:38,199 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] largest-eigenval quality=0.852 (reward=0, 23/27 tests passed, cost=$0.0474)
+2026-08-28 18:41:43,722 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:41:43,990 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:41:44,385 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:41:44,386 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] parallel-particle-simulator starting (image=ghcr.io/trajectoryrl/scenario-parallel-particle-simulator:latest)
+2026-08-28 18:41:45,216 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:44:55,271 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:47:39,220 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 18:47:39,220 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 18:48:01,122 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 18:54:55,728 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 18:56:20,981 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] nginx-request-logging hermes chat finished (exit=None, timed_out=True, 404958 chars)
+2026-08-28 18:56:21,391 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:22,489 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep13 (id=3aa19ce57edc)
+2026-08-28 18:56:27,776 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] llm-inference-batching-scheduler hermes chat finished (exit=None, timed_out=True, 507219 chars)
+2026-08-28 18:56:28,014 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:29,842 | WARNING  | trajectoryrl.utils.sandbox_harness | [e223261e996c] llm-inference-batching-scheduler agent produced no output at /app/task_file/output.tar.gz
+2026-08-28 18:56:30,337 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep12 (id=d216dd5e6c9e)
+2026-08-28 18:56:31,317 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep13: reward=1 (exit_code=0)
+2026-08-28 18:56:31,368 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] nginx-request-logging quality=1.000 (reward=1, 8/8 tests passed, cost=$0.0373)
+2026-08-28 18:56:35,788 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep12: reward=0 (exit_code=0)
+2026-08-28 18:56:35,836 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] llm-inference-batching-scheduler quality=0.167 (reward=0, 1/6 tests passed, cost=$0.0514)
+2026-08-28 18:56:36,940 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:37,007 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:37,426 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:37,427 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] path-tracing starting (image=ghcr.io/trajectoryrl/scenario-path-tracing:latest)
+2026-08-28 18:56:38,307 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:41,249 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:41,429 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:42,277 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:42,278 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] postgres-csv-clean starting (image=ghcr.io/trajectoryrl/scenario-postgres-csv-clean:latest)
+2026-08-28 18:56:43,160 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:45,049 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] parallel-particle-simulator hermes chat finished (exit=None, timed_out=True, 470234 chars)
+2026-08-28 18:56:45,289 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:46,276 | WARNING  | trajectoryrl.utils.sandbox_harness | [e223261e996c] parallel-particle-simulator agent produced no output at /app/deliverable.tar.gz
+2026-08-28 18:56:46,611 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep14 (id=afa58cbac076)
+2026-08-28 18:56:52,470 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep14: reward=0 (exit_code=0)
+2026-08-28 18:56:52,515 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] parallel-particle-simulator quality=0.062 (reward=0, 1/16 tests passed, cost=$0.0273)
+2026-08-28 18:56:58,100 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 18:56:58,311 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:58,729 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 18:56:58,730 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] puzzle-solver starting (image=ghcr.io/trajectoryrl/scenario-puzzle-solver:latest)
+2026-08-28 18:56:59,558 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:00:24,682 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] postgres-csv-clean hermes chat finished (exit=0, timed_out=False, 101275 chars)
+2026-08-28 19:00:25,101 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:00:25,506 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep16 (id=c6b3113ee183)
+2026-08-28 19:00:33,959 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep16: reward=1 (exit_code=0)
+2026-08-28 19:00:34,033 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] postgres-csv-clean quality=1.000 (reward=1, 14/14 tests passed, cost=$0.0088)
+2026-08-28 19:00:39,480 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:00:39,665 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:00:40,172 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:00:40,173 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] query-optimize starting (image=ghcr.io/trajectoryrl/scenario-query-optimize:latest)
+2026-08-28 19:00:40,991 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:01:04,936 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] puzzle-solver hermes chat finished (exit=0, timed_out=False, 71225 chars)
+2026-08-28 19:01:05,298 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:01:05,340 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep17 (id=b03e42a218d6)
+2026-08-28 19:01:13,242 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep17: reward=1 (exit_code=0)
+2026-08-28 19:01:13,286 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] puzzle-solver quality=1.000 (reward=1, 15/15 tests passed, cost=$0.0116)
+2026-08-28 19:01:18,733 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:01:18,913 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:01:19,331 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:01:19,332 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] race-condition-fix starting (image=ghcr.io/trajectoryrl/scenario-race-condition-fix:latest)
+2026-08-28 19:01:20,146 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:04:23,081 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] race-condition-fix hermes chat finished (exit=0, timed_out=False, 17459 chars)
+2026-08-28 19:04:23,352 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep19 (id=f3ed3b5c1768)
+2026-08-28 19:04:23,443 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:04:29,424 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep19: reward=1 (exit_code=0)
+2026-08-28 19:04:29,465 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] race-condition-fix quality=1.000 (reward=1, 23/23 tests passed, cost=$0.0044)
+2026-08-28 19:04:34,915 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:04:35,259 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:04:35,509 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:04:35,511 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-chess starting (image=ghcr.io/trajectoryrl/scenario-regex-chess:latest)
+2026-08-28 19:04:36,360 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:04:55,976 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 19:08:03,156 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 19:08:03,156 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 19:08:25,120 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 19:14:56,295 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 19:15:40,804 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] query-optimize hermes chat finished (exit=None, timed_out=True, 224688 chars)
+2026-08-28 19:15:41,184 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:15:42,185 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep18 (id=e163cf99c797)
+2026-08-28 19:16:38,119 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] path-tracing hermes chat finished (exit=None, timed_out=True, 348251 chars)
+2026-08-28 19:16:38,377 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:16:40,126 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep15 (id=786a6e327f67)
+2026-08-28 19:16:58,982 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep15: reward=0 (exit_code=0)
+2026-08-28 19:16:59,089 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] path-tracing quality=0.800 (reward=0, 4/5 tests passed, cost=$0.0716)
+2026-08-28 19:17:04,735 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:17:04,896 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:17:05,693 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:17:05,695 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-engine-from-scratch starting (image=ghcr.io/trajectoryrl/scenario-regex-engine-from-scratch:latest)
+2026-08-28 19:17:06,568 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:21:02,294 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep18: reward=1 (exit_code=0)
+2026-08-28 19:21:02,340 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] query-optimize quality=1.000 (reward=1, 6/6 tests passed, cost=$0.0170)
+2026-08-28 19:21:07,964 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:21:07,997 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:21:08,306 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:21:08,307 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] swe-bench-astropy-2 starting (image=ghcr.io/trajectoryrl/scenario-swe-bench-astropy-2:latest)
+2026-08-28 19:21:09,134 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:24:36,178 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-chess hermes chat finished (exit=None, timed_out=True, 633954 chars)
+2026-08-28 19:24:36,421 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:24:37,572 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep20 (id=c4e86c7263b1)
+2026-08-28 19:24:43,990 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep20: reward=0 (exit_code=0)
+2026-08-28 19:24:44,049 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-chess quality=0.250 (reward=0, 1/4 tests passed, cost=$0.0147)
+2026-08-28 19:24:49,466 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:24:49,488 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:24:49,864 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:24:49,865 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] torch-tensor-parallelism starting (image=ghcr.io/trajectoryrl/scenario-torch-tensor-parallelism:latest)
+2026-08-28 19:24:50,809 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:24:56,534 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 19:28:27,183 | WARNING  | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights attempt 1/3 FAILED — success=False, message=None, uids=[124]
+2026-08-28 19:28:27,183 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] Retrying set_weights in 12s...
+2026-08-28 19:28:48,953 | INFO     | trajectoryrl.base.validator | [winner=5EPWhPxV UID 124] set_weights OK — uids=[124], success=True, message=Success
+2026-08-28 19:32:06,422 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-engine-from-scratch hermes chat finished (exit=None, timed_out=True, 408475 chars)
+2026-08-28 19:32:06,714 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:32:11,268 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep21 (id=b4c5e1455402)
+2026-08-28 19:32:24,373 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep21: reward=0 (exit_code=0)
+2026-08-28 19:32:24,633 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] regex-engine-from-scratch quality=0.889 (reward=0, 32/36 tests passed, cost=$0.0339)
+2026-08-28 19:32:31,762 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:32:32,044 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:32:32,433 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:32:32,434 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] tree-directory-parser starting (image=ghcr.io/trajectoryrl/scenario-tree-directory-parser:latest)
+2026-08-28 19:32:35,392 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:32:49,318 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] torch-tensor-parallelism hermes chat finished (exit=0, timed_out=False, 207595 chars)
+2026-08-28 19:32:49,547 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:32:49,682 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep23 (id=02e50b31419d)
+2026-08-28 19:33:17,286 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep23: reward=1 (exit_code=0)
+2026-08-28 19:33:17,296 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] torch-tensor-parallelism quality=1.000 (reward=1, 13/13 tests passed, cost=$0.0165)
+2026-08-28 19:33:22,874 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:33:22,977 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:33:23,387 | INFO     | httpx | HTTP Request: GET https://trajrl.com/api/v2/epoch/current "HTTP/1.1 200 OK"
+2026-08-28 19:33:23,388 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] write-compressor starting (image=ghcr.io/trajectoryrl/scenario-write-compressor:latest)
+2026-08-28 19:33:24,227 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:34:56,894 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 19:36:08,947 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] swe-bench-astropy-2 hermes chat finished (exit=None, timed_out=True, 314008 chars)
+2026-08-28 19:36:09,289 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:36:10,371 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep22 (id=5c3bec9db332)
+2026-08-28 19:37:41,823 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep22: reward=1 (exit_code=0)
+2026-08-28 19:37:42,100 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] swe-bench-astropy-2 quality=1.000 (reward=1, 5/5 tests passed, cost=$0.0599)
+2026-08-28 19:37:48,137 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:39:16,018 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] tree-directory-parser hermes chat finished (exit=0, timed_out=False, 150746 chars)
+2026-08-28 19:39:16,296 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep24 (id=15bdb521d6a7)
+2026-08-28 19:39:16,376 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:39:21,581 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep24: reward=0 (exit_code=0)
+2026-08-28 19:39:21,625 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] tree-directory-parser quality=0.833 (reward=0, 10/12 tests passed, cost=$0.0195)
+2026-08-28 19:39:27,180 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:44:57,192 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/validators/heartbeat "HTTP/1.1 200 OK"
+2026-08-28 19:48:24,039 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] write-compressor hermes chat finished (exit=None, timed_out=True, 428184 chars)
+2026-08-28 19:48:24,400 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:48:25,134 | WARNING  | trajectoryrl.utils.sandbox_harness | [e223261e996c] write-compressor agent produced no output at /app/data.comp
+2026-08-28 19:48:25,359 | INFO     | trajectoryrl.utils.sandbox_harness | Started verifier verifier_e223261e996c_ep25 (id=c48a4790de2a)
+2026-08-28 19:48:30,728 | INFO     | trajectoryrl.utils.sandbox_harness | Verifier verifier_e223261e996c_ep25: reward=0 (exit_code=0)
+2026-08-28 19:48:30,768 | INFO     | trajectoryrl.utils.sandbox_harness | [e223261e996c] write-compressor quality=0.000 (reward=0, 0/3 tests passed, cost=$0.0254)
+2026-08-28 19:48:35,952 | INFO     | trajectoryrl.utils.sandbox_harness | eval complete: final_score=20.610 (mean_q=0.793, scenarios={'attention-mil': 1.0, 'audio-synth-stft-peaks': 0.9230769230769231, 'configure-git-webserver': 1.0, 'crack-7z-hash': 1.0, 'custom-memory-heap-crash': 0.8333333333333334, 'db-wal-recovery': 1.0, 'deterministic-tarball': 1.0, 'fix-code-vulnerability': 1.0, 'git-leak-recovery': 1.0, 'git-multibranch': 0.0, 'large-scale-text-editing': 1.0, 'largest-eigenval': 0.8518518518518519, 'llm-inference-batching-scheduler': 0.16666666666666666, 'nginx-request-logging': 1.0, 'parallel-particle-simulator': 0.0625, 'path-tracing': 0.8, 'postgres-csv-clean': 1.0, 'puzzle-solver': 1.0, 'query-optimize': 1.0, 'race-condition-fix': 1.0, 'regex-chess': 0.25, 'regex-engine-from-scratch': 0.8888888888888888, 'swe-bench-astropy-2': 1.0, 'torch-tensor-parallelism': 1.0, 'tree-directory-parser': 0.8333333333333334, 'write-compressor': 0.0})
+2026-08-28 19:48:36,202 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/scenario_progress "HTTP/1.1 200 OK"
+2026-08-28 19:48:36,402 | INFO     | httpx | HTTP Request: POST https://trajrl.com/api/v2/epoch/3555/score "HTTP/1.1 200 OK"

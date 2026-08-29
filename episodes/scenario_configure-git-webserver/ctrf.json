@@ -1,0 +1,92 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787939796.026923,
+      "stop": 1787939798.565583
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_packages_installed",
+        "status": "passed",
+        "duration": 0.0007727835327386856,
+        "start": 1787939796.0624156,
+        "stop": 1787939796.0634637,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_git_user_exists",
+        "status": "passed",
+        "duration": 0.0021624257788062096,
+        "start": 1787939796.0636687,
+        "stop": 1787939796.0660014,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_bare_repo_exists",
+        "status": "passed",
+        "duration": 0.0004767179489135742,
+        "start": 1787939796.0661833,
+        "stop": 1787939796.0668023,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_bare_repo_owned_by_git",
+        "status": "passed",
+        "duration": 0.0017704227939248085,
+        "start": 1787939796.0669835,
+        "stop": 1787939796.068926,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_post_receive_hook_installed",
+        "status": "passed",
+        "duration": 0.0004736827686429024,
+        "start": 1787939796.0691051,
+        "stop": 1787939796.069724,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_webroot_exists_and_serves_via_nginx",
+        "status": "passed",
+        "duration": 0.01221571583300829,
+        "start": 1787939796.0698988,
+        "stop": 1787939796.0822704,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_ssh_listening_on_22",
+        "status": "passed",
+        "duration": 0.0005050348117947578,
+        "start": 1787939796.082524,
+        "stop": 1787939796.0832026,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_zz_end_to_end_clone_push_curl",
+        "status": "passed",
+        "duration": 2.4816106790676713,
+        "start": 1787939796.083469,
+        "stop": 1787939798.5653412,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

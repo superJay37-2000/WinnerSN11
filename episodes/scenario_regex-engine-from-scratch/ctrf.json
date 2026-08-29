@@ -1,0 +1,356 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 36,
+      "passed": 32,
+      "failed": 4,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787945541.076974,
+      "stop": 1787945541.161663
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_T1_literal_00",
+        "status": "passed",
+        "duration": 0.0005217110738158226,
+        "start": 1787945541.1114433,
+        "stop": 1787945541.112195,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T1_literal_01",
+        "status": "passed",
+        "duration": 0.00042245909571647644,
+        "start": 1787945541.1123874,
+        "stop": 1787945541.112953,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T1_literal_02",
+        "status": "passed",
+        "duration": 0.0003776438534259796,
+        "start": 1787945541.113145,
+        "stop": 1787945541.1136508,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T1_literal_03",
+        "status": "passed",
+        "duration": 0.0003938749432563782,
+        "start": 1787945541.113837,
+        "stop": 1787945541.1143563,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T1_literal_04",
+        "status": "passed",
+        "duration": 0.0003751041367650032,
+        "start": 1787945541.1145241,
+        "stop": 1787945541.1150403,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_00",
+        "status": "passed",
+        "duration": 0.0003659827634692192,
+        "start": 1787945541.115206,
+        "stop": 1787945541.1156945,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_01",
+        "status": "passed",
+        "duration": 0.00037761032581329346,
+        "start": 1787945541.1158729,
+        "stop": 1787945541.1163743,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_02",
+        "status": "passed",
+        "duration": 0.0004541054368019104,
+        "start": 1787945541.1165397,
+        "stop": 1787945541.1171331,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_03",
+        "status": "passed",
+        "duration": 0.000390833243727684,
+        "start": 1787945541.117306,
+        "stop": 1787945541.117824,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_04",
+        "status": "passed",
+        "duration": 0.0003907782956957817,
+        "start": 1787945541.1180065,
+        "stop": 1787945541.1185243,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T2_quantifier_05",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0007183179259300232,
+        "start": 1787945541.1186926,
+        "stop": 1787945541.133,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       helper(*case)\n\n/tests/test_outputs.py:223: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npat = 'ab?c', text = 'ac', expected = True\n\n    def _check_fullmatch(pat, text, expected):\n        m = _myregex.compile(pat).fullmatch(text)\n        actual = m is not None\n>       assert actual == expected, (\n            f\"compile({pat!r}).fullmatch({text!r}) \u2014 expected={expected}, \"\n            f\"got={actual} (match={m})\"\n        )\nE       AssertionError: compile('ab?c').fullmatch('ac') \u2014 expected=True, got=False (match=None)\nE       assert False == True\n\n/tests/test_outputs.py:174: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_T3_wildcard_00",
+        "status": "passed",
+        "duration": 0.00040491390973329544,
+        "start": 1787945541.133181,
+        "stop": 1787945541.133713,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T3_wildcard_01",
+        "status": "passed",
+        "duration": 0.00039079226553440094,
+        "start": 1787945541.1338859,
+        "stop": 1787945541.1343992,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T3_wildcard_02",
+        "status": "passed",
+        "duration": 0.0004001948982477188,
+        "start": 1787945541.134568,
+        "stop": 1787945541.135097,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T4_alt_group_00",
+        "status": "passed",
+        "duration": 0.0003796769306063652,
+        "start": 1787945541.1352603,
+        "stop": 1787945541.1357625,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T4_alt_group_01",
+        "status": "passed",
+        "duration": 0.00038346555083990097,
+        "start": 1787945541.1359353,
+        "stop": 1787945541.1364434,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T4_alt_group_02",
+        "status": "passed",
+        "duration": 0.0004087081179022789,
+        "start": 1787945541.1366146,
+        "stop": 1787945541.137154,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T4_alt_group_03",
+        "status": "passed",
+        "duration": 0.0004016868770122528,
+        "start": 1787945541.1373243,
+        "stop": 1787945541.137871,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_00",
+        "status": "passed",
+        "duration": 0.0003772145137190819,
+        "start": 1787945541.1380372,
+        "stop": 1787945541.1385334,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_01",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0004904186353087425,
+        "start": 1787945541.1386974,
+        "stop": 1787945541.142993,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       helper(*case)\n\n/tests/test_outputs.py:223: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npat = '[abc]', text = 'd', expected = False\n\n    def _check_fullmatch(pat, text, expected):\n        m = _myregex.compile(pat).fullmatch(text)\n        actual = m is not None\n>       assert actual == expected, (\n            f\"compile({pat!r}).fullmatch({text!r}) \u2014 expected={expected}, \"\n            f\"got={actual} (match={m})\"\n        )\nE       AssertionError: compile('[abc]').fullmatch('d') \u2014 expected=False, got=True (match=<myregex.Match object at 0x79fc3d9a8300>)\nE       assert True == False\n\n/tests/test_outputs.py:174: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_02",
+        "status": "passed",
+        "duration": 0.0003854287788271904,
+        "start": 1787945541.1431637,
+        "stop": 1787945541.1436698,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_03",
+        "status": "passed",
+        "duration": 0.0003777211531996727,
+        "start": 1787945541.1438515,
+        "stop": 1787945541.144352,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_04",
+        "status": "passed",
+        "duration": 0.00039422977715730667,
+        "start": 1787945541.1445134,
+        "stop": 1787945541.145024,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T5_charclass_05",
+        "status": "passed",
+        "duration": 0.0003653261810541153,
+        "start": 1787945541.1451871,
+        "stop": 1787945541.1456687,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T6_anchor_00",
+        "status": "passed",
+        "duration": 0.00038179196417331696,
+        "start": 1787945541.145847,
+        "stop": 1787945541.1463451,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T6_anchor_01",
+        "status": "passed",
+        "duration": 0.00037771277129650116,
+        "start": 1787945541.146506,
+        "stop": 1787945541.147001,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T6_anchor_02",
+        "status": "passed",
+        "duration": 0.00036918651312589645,
+        "start": 1787945541.1471622,
+        "stop": 1787945541.147647,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T7_group_00",
+        "status": "passed",
+        "duration": 0.00045991968363523483,
+        "start": 1787945541.1478252,
+        "stop": 1787945541.1484134,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T7_group_01",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00047706905752420425,
+        "start": 1787945541.1485796,
+        "stop": 1787945541.1528323,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       helper(*case)\n\n/tests/test_outputs.py:223: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npat = '(\\\\d+)-(\\\\d+)', text = '123-456'\nexpected_groups = ['123-456', '123', '456']\n\n    def _check_groups(pat, text, expected_groups):\n        m = _myregex.compile(pat).fullmatch(text)\n>       assert m is not None, f\"compile({pat!r}).fullmatch({text!r}) returned None\"\nE       AssertionError: compile('(\\\\d+)-(\\\\d+)').fullmatch('123-456') returned None\nE       assert None is not None\n\n/tests/test_outputs.py:200: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_T7_group_02",
+        "status": "passed",
+        "duration": 0.00038137286901474,
+        "start": 1787945541.1530063,
+        "stop": 1787945541.1535141,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T7_group_03",
+        "status": "passed",
+        "duration": 0.00040373392403125763,
+        "start": 1787945541.1536808,
+        "stop": 1787945541.1542096,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T7_group_04",
+        "status": "passed",
+        "duration": 0.00037789344787597656,
+        "start": 1787945541.1543758,
+        "stop": 1787945541.15489,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T8_backref_00",
+        "status": "passed",
+        "duration": 0.000372481532394886,
+        "start": 1787945541.1550539,
+        "stop": 1787945541.1555457,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T8_backref_01",
+        "status": "passed",
+        "duration": 0.0003706933930516243,
+        "start": 1787945541.1557252,
+        "stop": 1787945541.1562161,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_T8_backref_02",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00047691352665424347,
+        "start": 1787945541.156377,
+        "stop": 1787945541.16083,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       helper(*case)\n\n/tests/test_outputs.py:223: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npat = '(\\\\d+)x\\\\1', text = '42x42', expected = True\n\n    def _check_fullmatch(pat, text, expected):\n        m = _myregex.compile(pat).fullmatch(text)\n        actual = m is not None\n>       assert actual == expected, (\n            f\"compile({pat!r}).fullmatch({text!r}) \u2014 expected={expected}, \"\n            f\"got={actual} (match={m})\"\n        )\nE       AssertionError: compile('(\\\\d+)x\\\\1').fullmatch('42x42') \u2014 expected=True, got=False (match=None)\nE       assert False == True\n\n/tests/test_outputs.py:174: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_T8_backref_03",
+        "status": "passed",
+        "duration": 0.00038125645369291306,
+        "start": 1787945541.161004,
+        "stop": 1787945541.1615,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

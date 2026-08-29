@@ -1,0 +1,275 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 27,
+      "passed": 23,
+      "failed": 4,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787942495.9040701,
+      "stop": 1787942496.4895222
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_eigen_pair_2",
+        "status": "passed",
+        "duration": 0.0012639090418815613,
+        "start": 1787942496.1623049,
+        "stop": 1787942496.1639173,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_2",
+        "status": "passed",
+        "duration": 0.0008372506126761436,
+        "start": 1787942496.1641316,
+        "stop": 1787942496.1651735,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_2",
+        "status": "passed",
+        "duration": 0.08846105448901653,
+        "start": 1787942496.165424,
+        "stop": 1787942496.254491,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_3",
+        "status": "passed",
+        "duration": 0.001148485578596592,
+        "start": 1787942496.2549388,
+        "stop": 1787942496.2563126,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_3",
+        "status": "passed",
+        "duration": 0.0008430909365415573,
+        "start": 1787942496.2566195,
+        "stop": 1787942496.257691,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_3",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.019079089164733887,
+        "start": 1787942496.257996,
+        "stop": 1787942496.3021278,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       _check_speedup(size)\n\n/tests/test_outputs.py:148: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsize = 3\n\n    def _check_speedup(size):\n        \"\"\"Make sure new implementation is faster than reference.\"\"\"\n        _np_random_seed(0)\n        matrices = [\n            _np_random_normal(size=(size, size)).astype(np.float64) for _ in range(N)\n        ]\n    \n        with ProcessPoolExecutor(max_workers=1) as executor:\n            ref_future = executor.submit(\n                _time_function_isolated,\n                ref_solution,\n                matrices,\n            )\n            ref_dts = ref_future.result(timeout=30)\n            ref_dt = np.median(ref_dts).item() if ref_dts else float(\"inf\")\n            print(f\"Median time for {size}x{size} (ref): {ref_dt:.6f} seconds\")\n    \n            candidate_future = executor.submit(\n                _time_function_isolated,\n                find_dominant_eigenvalue_and_eigenvector,\n                matrices,\n            )\n            dts = candidate_future.result(timeout=30)\n            dt = np.median(dts).item() if dts else float(\"inf\")\n            print(f\"Median time for {size}x{size}: {dt:.6f} seconds\")\n    \n>       assert dt < ref_dt, f\"{dt:.6f} seconds/call > {ref_dt:.6f} seconds/call\"\nE       AssertionError: 0.000027 seconds/call > 0.000026 seconds/call\nE       assert 2.7257949113845825e-05 < 2.5549903512001038e-05\n\n/tests/test_outputs.py:126: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_4",
+        "status": "passed",
+        "duration": 0.0008233208209276199,
+        "start": 1787942496.30237,
+        "stop": 1787942496.3033388,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_4",
+        "status": "passed",
+        "duration": 0.0005816332995891571,
+        "start": 1787942496.3035197,
+        "stop": 1787942496.304254,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_4",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.016566621139645576,
+        "start": 1787942496.3044348,
+        "stop": 1787942496.326405,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       _check_speedup(size)\n\n/tests/test_outputs.py:148: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsize = 4\n\n    def _check_speedup(size):\n        \"\"\"Make sure new implementation is faster than reference.\"\"\"\n        _np_random_seed(0)\n        matrices = [\n            _np_random_normal(size=(size, size)).astype(np.float64) for _ in range(N)\n        ]\n    \n        with ProcessPoolExecutor(max_workers=1) as executor:\n            ref_future = executor.submit(\n                _time_function_isolated,\n                ref_solution,\n                matrices,\n            )\n            ref_dts = ref_future.result(timeout=30)\n            ref_dt = np.median(ref_dts).item() if ref_dts else float(\"inf\")\n            print(f\"Median time for {size}x{size} (ref): {ref_dt:.6f} seconds\")\n    \n            candidate_future = executor.submit(\n                _time_function_isolated,\n                find_dominant_eigenvalue_and_eigenvector,\n                matrices,\n            )\n            dts = candidate_future.result(timeout=30)\n            dt = np.median(dts).item() if dts else float(\"inf\")\n            print(f\"Median time for {size}x{size}: {dt:.6f} seconds\")\n    \n>       assert dt < ref_dt, f\"{dt:.6f} seconds/call > {ref_dt:.6f} seconds/call\"\nE       AssertionError: 0.000027 seconds/call > 0.000027 seconds/call\nE       assert 2.667214721441269e-05 < 2.6574824005365372e-05\n\n/tests/test_outputs.py:126: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_5",
+        "status": "passed",
+        "duration": 0.0009914981201291084,
+        "start": 1787942496.3266814,
+        "stop": 1787942496.3278372,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_5",
+        "status": "passed",
+        "duration": 0.0006077233701944351,
+        "start": 1787942496.328026,
+        "stop": 1787942496.328787,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_5",
+        "status": "passed",
+        "duration": 0.01716477144509554,
+        "start": 1787942496.32896,
+        "stop": 1787942496.3465297,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_6",
+        "status": "passed",
+        "duration": 0.0008925348520278931,
+        "start": 1787942496.3469398,
+        "stop": 1787942496.347995,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_6",
+        "status": "passed",
+        "duration": 0.0006074244156479836,
+        "start": 1787942496.3481746,
+        "stop": 1787942496.3489487,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_6",
+        "status": "passed",
+        "duration": 0.017809427343308926,
+        "start": 1787942496.3491292,
+        "stop": 1787942496.3673651,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_7",
+        "status": "passed",
+        "duration": 0.0009228736162185669,
+        "start": 1787942496.3677735,
+        "stop": 1787942496.3688574,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_7",
+        "status": "passed",
+        "duration": 0.0006494158878922462,
+        "start": 1787942496.369052,
+        "stop": 1787942496.369851,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_7",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.026504837907850742,
+        "start": 1787942496.3701117,
+        "stop": 1787942496.4046054,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       _check_speedup(size)\n\n/tests/test_outputs.py:148: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsize = 7\n\n    def _check_speedup(size):\n        \"\"\"Make sure new implementation is faster than reference.\"\"\"\n        _np_random_seed(0)\n        matrices = [\n            _np_random_normal(size=(size, size)).astype(np.float64) for _ in range(N)\n        ]\n    \n        with ProcessPoolExecutor(max_workers=1) as executor:\n            ref_future = executor.submit(\n                _time_function_isolated,\n                ref_solution,\n                matrices,\n            )\n            ref_dts = ref_future.result(timeout=30)\n            ref_dt = np.median(ref_dts).item() if ref_dts else float(\"inf\")\n            print(f\"Median time for {size}x{size} (ref): {ref_dt:.6f} seconds\")\n    \n            candidate_future = executor.submit(\n                _time_function_isolated,\n                find_dominant_eigenvalue_and_eigenvector,\n                matrices,\n            )\n            dts = candidate_future.result(timeout=30)\n            dt = np.median(dts).item() if dts else float(\"inf\")\n            print(f\"Median time for {size}x{size}: {dt:.6f} seconds\")\n    \n>       assert dt < ref_dt, f\"{dt:.6f} seconds/call > {ref_dt:.6f} seconds/call\"\nE       AssertionError: 0.000039 seconds/call > 0.000037 seconds/call\nE       assert 3.871694207191467e-05 < 3.7052202969789505e-05\n\n/tests/test_outputs.py:126: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_8",
+        "status": "passed",
+        "duration": 0.0009471187368035316,
+        "start": 1787942496.404906,
+        "stop": 1787942496.4060245,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_8",
+        "status": "passed",
+        "duration": 0.000623033381998539,
+        "start": 1787942496.4062166,
+        "stop": 1787942496.4069908,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_8",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.022520731203258038,
+        "start": 1787942496.4071603,
+        "stop": 1787942496.4348657,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "def _test():\n>       _check_speedup(size)\n\n/tests/test_outputs.py:148: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsize = 8\n\n    def _check_speedup(size):\n        \"\"\"Make sure new implementation is faster than reference.\"\"\"\n        _np_random_seed(0)\n        matrices = [\n            _np_random_normal(size=(size, size)).astype(np.float64) for _ in range(N)\n        ]\n    \n        with ProcessPoolExecutor(max_workers=1) as executor:\n            ref_future = executor.submit(\n                _time_function_isolated,\n                ref_solution,\n                matrices,\n            )\n            ref_dts = ref_future.result(timeout=30)\n            ref_dt = np.median(ref_dts).item() if ref_dts else float(\"inf\")\n            print(f\"Median time for {size}x{size} (ref): {ref_dt:.6f} seconds\")\n    \n            candidate_future = executor.submit(\n                _time_function_isolated,\n                find_dominant_eigenvalue_and_eigenvector,\n                matrices,\n            )\n            dts = candidate_future.result(timeout=30)\n            dt = np.median(dts).item() if dts else float(\"inf\")\n            print(f\"Median time for {size}x{size}: {dt:.6f} seconds\")\n    \n>       assert dt < ref_dt, f\"{dt:.6f} seconds/call > {ref_dt:.6f} seconds/call\"\nE       AssertionError: 0.000043 seconds/call > 0.000043 seconds/call\nE       assert 4.299357533454895e-05 < 4.292977973818779e-05\n\n/tests/test_outputs.py:126: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_9",
+        "status": "passed",
+        "duration": 0.000950448215007782,
+        "start": 1787942496.4351327,
+        "stop": 1787942496.436246,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_9",
+        "status": "passed",
+        "duration": 0.000713731162250042,
+        "start": 1787942496.4364414,
+        "stop": 1787942496.437305,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_9",
+        "status": "passed",
+        "duration": 0.024931317195296288,
+        "start": 1787942496.4375076,
+        "stop": 1787942496.4629214,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_eigen_pair_10",
+        "status": "passed",
+        "duration": 0.001047513447701931,
+        "start": 1787942496.464533,
+        "stop": 1787942496.4657545,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_dominance_eigenvalue_10",
+        "status": "passed",
+        "duration": 0.0006879791617393494,
+        "start": 1787942496.4659615,
+        "stop": 1787942496.4667904,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_speedup_10",
+        "status": "passed",
+        "duration": 0.021724803373217583,
+        "start": 1787942496.4669778,
+        "stop": 1787942496.4891102,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

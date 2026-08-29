@@ -1,0 +1,227 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1787943868.1229966,
+      "stop": 1787943869.0194304
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_money_conserved_2t_4a_500n",
+        "status": "passed",
+        "duration": 0.04115826915949583,
+        "start": 1787943868.1494625,
+        "stop": 1787943868.190938,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_2t_4a_500n",
+        "status": "passed",
+        "duration": 0.03973927069455385,
+        "start": 1787943868.1911657,
+        "stop": 1787943868.2310839,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_2t_4a_500n",
+        "status": "passed",
+        "duration": 0.03808911982923746,
+        "start": 1787943868.2312877,
+        "stop": 1787943868.269522,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_money_conserved_4t_4a_500n",
+        "status": "passed",
+        "duration": 0.04118617624044418,
+        "start": 1787943868.2697237,
+        "stop": 1787943868.3110664,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_4t_4a_500n",
+        "status": "passed",
+        "duration": 0.040985215455293655,
+        "start": 1787943868.3112686,
+        "stop": 1787943868.3524275,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_4t_4a_500n",
+        "status": "passed",
+        "duration": 0.03893814142793417,
+        "start": 1787943868.3526459,
+        "stop": 1787943868.391759,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_money_conserved_4t_16a_500n",
+        "status": "passed",
+        "duration": 0.04038840997964144,
+        "start": 1787943868.3920658,
+        "stop": 1787943868.4326458,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_4t_16a_500n",
+        "status": "passed",
+        "duration": 0.046265264973044395,
+        "start": 1787943868.4328742,
+        "stop": 1787943868.4793665,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_4t_16a_500n",
+        "status": "passed",
+        "duration": 0.04313870798796415,
+        "start": 1787943868.479627,
+        "stop": 1787943868.5229821,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_money_conserved_8t_16a_500n",
+        "status": "passed",
+        "duration": 0.04758326709270477,
+        "start": 1787943868.5232034,
+        "stop": 1787943868.5709996,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_8t_16a_500n",
+        "status": "passed",
+        "duration": 0.04714172054082155,
+        "start": 1787943868.571223,
+        "stop": 1787943868.618528,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_8t_16a_500n",
+        "status": "passed",
+        "duration": 0.047416675835847855,
+        "start": 1787943868.6187544,
+        "stop": 1787943868.666334,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_money_conserved_16t_16a_250n",
+        "status": "passed",
+        "duration": 0.048180087469518185,
+        "start": 1787943868.666538,
+        "stop": 1787943868.714933,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_16t_16a_250n",
+        "status": "passed",
+        "duration": 0.049585807137191296,
+        "start": 1787943868.7151318,
+        "stop": 1787943868.7649438,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_16t_16a_250n",
+        "status": "passed",
+        "duration": 0.049860202707350254,
+        "start": 1787943868.7651627,
+        "stop": 1787943868.815194,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_money_conserved_16t_64a_250n",
+        "status": "passed",
+        "duration": 0.05042123608291149,
+        "start": 1787943868.8154147,
+        "stop": 1787943868.866003,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_negative_16t_64a_250n",
+        "status": "passed",
+        "duration": 0.04829363618046045,
+        "start": 1787943868.8662083,
+        "stop": 1787943868.9146612,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_no_deadlock_16t_64a_250n",
+        "status": "passed",
+        "duration": 0.04871474765241146,
+        "start": 1787943868.9148908,
+        "stop": 1787943868.9637783,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_api_self_transfer_or_returns_bool",
+        "status": "passed",
+        "duration": 0.0003812769427895546,
+        "start": 1787943868.9640176,
+        "stop": 1787943868.9645207,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_api_rejects_non_positive_amount",
+        "status": "passed",
+        "duration": 0.00040230248123407364,
+        "start": 1787943868.9646926,
+        "stop": 1787943868.9652379,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_api_rejects_unknown_account",
+        "status": "passed",
+        "duration": 0.0003422452136874199,
+        "start": 1787943868.9653947,
+        "stop": 1787943868.9658976,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_api_insufficient_funds_returns_false",
+        "status": "passed",
+        "duration": 0.00038078799843788147,
+        "start": 1787943868.9660676,
+        "stop": 1787943868.9665682,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::test_snapshot_consistency_under_load",
+        "status": "passed",
+        "duration": 0.052367608062922955,
+        "start": 1787943868.9667435,
+        "stop": 1787943869.0192423,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}
